@@ -400,7 +400,7 @@ pso:submitted a pso:PublicationStatus ;
     rdfs:comment "The status of a work (for example a document or a dataset) that has been submitted for publication by the author to a publisher or a data repository, prior to its being accepted or rejected."@en .
 
 <https://creativecommons.org/publicdomain/zero/1.0> a dcterms:licenseDocument ;
-    owl:sameAs <https://creativecommons.org/publicdomain/zero/1.0/> .
+    owl:sameAs <https://creativecommons.org/publicdomain/zero/1.0/> ;
     rdfs:label "CC0"@en .
 <https://creativecommons.org/licenses/by/4.0> a dcterms:licenseDocument ;
     owl:sameAs <https://creativecommons.org/licenses/by/4.0/> ;
