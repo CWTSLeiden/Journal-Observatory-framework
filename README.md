@@ -43,20 +43,20 @@ When converting the data, we have some properties that are mandatory for creatin
 
 ## Platform
 
-    ![Platform](img/ppo_ontology-Platform.drawio.png)
+![Platform](img/ppo_ontology-Platform.drawio.png)
 
 ## Identifier
 
-    ![Platform](img/ppo_ontology-Identifier.drawio.png)
+![Platform](img/ppo_ontology-Identifier.drawio.png)
 
 ## Publication Policy
 
-    ![Platform](img/ppo_ontology-Publication.drawio.png)
+![Platform](img/ppo_ontology-Publication.drawio.png)
 
 ## Evaluation Policy
 
-    ![Platform](img/ppo_ontology-Evaluation.drawio.png)
+![Platform](img/ppo_ontology-Evaluation.drawio.png)
 
 ## Publication Elsewhere Policy
 
-    ![Platform](img/ppo_ontology-PublicationElsewhere.drawio.png)
+![Platform](img/ppo_ontology-PublicationElsewhere.drawio.png)
