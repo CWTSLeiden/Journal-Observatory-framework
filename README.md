@@ -1,3 +1,6 @@
+# PAD framework
+
+![PAD-framework](img/pad_framework-PAD.drawio.png)
 
 ## PAD ID
 
@@ -22,6 +25,7 @@ A UUID is a random string of letters and numbers, which is extremely unlikely to
 #### Cons
 - The UUID has no semantic value.
 - The UUID needs to be generated before constructing the PAD and injected during the SPARQL query. This can be done using prefixes, but makes constructing the RDF store slightly problematic. Alternatively, the UUID can be generated within the SPARQL query, but this makes constructing the query properly more complex.
+- Updating PADs is problematic
 
 ### 3. Identifier scheme
 When converting the data, we have some properties that are mandatory for creating a PAD: The ISSN-L of the journal that is being asserted, the name of the data-source of the assertion and the timestamp at which moment the assertion was created. Combining this in the following url-schema: <https://journalobservatory.org/[issn-l]/[data-source]/[timestamp]> gives us a proper identifier.
@@ -33,4 +37,26 @@ When converting the data, we have some properties that are mandatory for creatin
 #### Cons
 - There is a chance of identifier collisions.
 - The identifier is dependent on the quality of its parts (malformed timestamps/issn/etc).
-- Adds complexity to the SPARQL query.
+
+
+# Publication Platform Ontology
+
+## Platform
+
+    ![Platform](img/ppo_ontology-Platform.drawio.png)
+
+## Identifier
+
+    ![Platform](img/ppo_ontology-Identifier.drawio.png)
+
+## Publication Policy
+
+    ![Platform](img/ppo_ontology-Publication.drawio.png)
+
+## Evaluation Policy
+
+    ![Platform](img/ppo_ontology-Evaluation.drawio.png)
+
+## Publication Elsewhere Policy
+
+    ![Platform](img/ppo_ontology-PublicationElsewhere.drawio.png)
