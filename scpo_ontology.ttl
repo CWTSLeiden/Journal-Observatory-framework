@@ -3,6 +3,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix doaj: <https://doaj.org/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -19,26 +20,23 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dc:creator a owl:AnnotationProperty .
-dc:date a owl:AnnotationProperty .
-dc:description a owl:AnnotationProperty .
-dc:rights a owl:AnnotationProperty .
-dc:title a owl:AnnotationProperty .
-
 scpo: a owl:Ontology ;
-    dc:title "SCPO, the Scholarly Communication Platform Ontology" ;
-    dc:creator "Bram van den Boomen"^^xsd:string ;
-    dc:creator "Nees-Jan van Eck"^^xsd:string ;
-    dc:creator "Ludo Waltman"^^xsd:string ;
-    dc:creator "Serge Horbach"^^xsd:string ;
-    dc:creator "Tony Ross-Hellauer"^^xsd:string ;
-    dc:rights "This work is distributed under a Creative Commons Universal (CC0 1.0) Public Domain Dedication: (https://creativecommons.org/publicdomain/zero/1.0/)" ;
-    dc:date "2023-04-21"^^xsd:string ;
-    dc:description """
+    dcterms:title "SCPO, the Scholarly Communication Platform Ontology" ;
+    dcterms:creator "Bram van den Boomen" ;
+    dcterms:creator "Nees-Jan van Eck" ;
+    dcterms:creator "Ludo Waltman" ;
+    dcterms:creator "Serge Horbach" ;
+    dcterms:creator "Tony Ross-Hellauer" ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:date "2023-04-21" ;
+    dcterms:description """
 TODO: Introduction (markdown)
 """@en ;
-    rdfs:comment "TODO: Abstract" ;
-    owl:versionInfo "0.1.0"^^xsd:string .
+    dcterms:abstract """
+TODO: Abstract
+"""@en ;
+    bibo:status "Ontology Specification Draft" ;
+    owl:versionInfo "0.1.0" .
 
 scpo:ArticleProcessingCharge a owl:Class ;
     rdfs:label "Article Processing Charge"@en ;
