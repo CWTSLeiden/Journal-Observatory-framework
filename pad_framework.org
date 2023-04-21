@@ -39,6 +39,31 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 #+end_src
 
+* Description
+
+#+begin_src ttl
+dc:creator a owl:AnnotationProperty .
+dc:date a owl:AnnotationProperty .
+dc:description a owl:AnnotationProperty .
+dc:rights a owl:AnnotationProperty .
+dc:title a owl:AnnotationProperty .
+
+scpo: a owl:Ontology ;
+    dc:title "PAD, the Platform Assertion Document Framework" ;
+    dc:creator "Bram van den Boomen"^^xsd:string ;
+    dc:creator "Nees-Jan van Eck"^^xsd:string ;
+    dc:creator "Ludo Waltman"^^xsd:string ;
+    dc:creator "Serge Horbach"^^xsd:string ;
+    dc:creator "Tony Ross-Hellauer"^^xsd:string ;
+    dc:rights "This work is distributed under a Creative Commons Universal (CC0 1.0) Public Domain Dedication: (https://creativecommons.org/publicdomain/zero/1.0/)" ;
+    dc:date "2023-04-21"^^xsd:string ;
+    dc:description """
+TODO: Introduction (markdown)
+"""@en ;
+    rdfs:comment "TODO: Abstract" ;
+    owl:versionInfo "0.1.0"^^xsd:string .
+#+end_src
+
 * Publishing Platform Ontology
 ** Classes
 *** pad:Assertion
