@@ -3,11 +3,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pad: <http://purl.org/cwts/pad/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-scpo: a owl:Ontology ;
+pad: a owl:Ontology ;
     dcterms:title "PAD, the Platform Assertion Document Framework" ;
     dcterms:creator "Bram van den Boomen" ;
     dcterms:creator "Nees-Jan van Eck" ;
