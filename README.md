@@ -1,6 +1,6 @@
 # Scholarly Communication Platform Framework
 
-The Scholarly Communication Platform Framework consists of two core elements:
+The Scholarly Communication Platform Framework, developed in the [Journal Observatory project](https://www.journalobservatory.org), is a new, high-level, structured language that enables the exchange of information about platforms for scholarly communication. The framework consists of two core elements:
 - the [Platform Assertion Document (PAD) data model](#platform-assertion-document-pad-data-model), that facilitates the exchange of information about scholarly communication platforms in a machine-readable and traceable way, and
 - the [Scholarly Communication Platform (SCPO) Ontology](#scholarly-communication-platform-scpo-ontology) for describing specific properties of scholarly communication platforms.
 
