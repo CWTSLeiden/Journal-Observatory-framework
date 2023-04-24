@@ -1,8 +1,10 @@
 # Scholarly Communication Platform Framework
 
-This repository contains the source code of the Scholarly Communication Platform Framework developed in the [Journal Observatory project](https://www.journalobservatory.org). The Scholarly Communication Platform Framework is a new, high-level, structured language that enables the exchange of information about platforms for scholarly communication. The framework consists of two core elements:
-- the [Platform Assertion Document (PAD) data model](#platform-assertion-document-pad-data-model), that facilitates the exchange of information about scholarly communication platforms in a machine-readable and traceable way, and
-- the [Scholarly Communication Platform (SCPO) Ontology](#scholarly-communication-platform-scpo-ontology) for describing specific properties of scholarly communication platforms.
+This repository contains the source code of the Scholarly Communication Platform Framework developed in the [Journal Observatory project](https://www.journalobservatory.org). The Scholarly Communication Platform Framework is a high-level structured language that enables the exchange of information about platforms for scholarly communication. The framework consists of two core elements:
+- The [Platform Assertion Document (PAD) data model](#platform-assertion-document-pad-data-model), which facilitates the exchange of information about scholarly communication platforms in a machine-readable and traceable way.
+- The [Scholarly Communication Platform Ontology (SCPO)](#scholarly-communication-platform-ontology-scpo) for describing specific properties of scholarly communication platforms.
+
+More detailed information is available in this [technical report](https://doi.org/10.5281/zenodo.7860610).
 
 ## Platform Assertion Document (PAD) data model
 
@@ -45,7 +47,7 @@ When converting the data, we have some properties that are mandatory for creatin
 - The identifier is dependent on the quality of its parts (malformed timestamps/issn/etc).
 
 
-## Scholarly Communication Platform (SCPO) Ontology
+## Scholarly Communication Platform Ontology (SCPO)
 
 ### Platform
 
