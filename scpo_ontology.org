@@ -56,12 +56,12 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 #+end_src
 
-** Publishing Platform Ontology
+** Scholarly Communication Platform Ontology
 
 <<<scpo>>>
 
 #+begin_src ttl
-@prefix scpo: <http://purl.org/cwts/scpo/> .
+@prefix scpo: <http://purl.org/job/scpo/> .
 #+end_src
 
 ** Publication Roles Ontology

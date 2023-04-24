@@ -5,7 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix pad: <http://purl.org/cwts/pad/> .
+@prefix pad: <http://purl.org/job/pad/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 pad: a owl:Ontology ;
