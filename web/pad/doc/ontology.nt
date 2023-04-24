@@ -1,0 +1,191 @@
+<http://purl.org/job/pad/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/abstract> "\nTODO: Abstract\n"@en .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Bram van den Boomen" .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Ludo Waltman" .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Nees-Jan van Eck" .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Serge Horbach" .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Tony Ross-Hellauer" .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/date> "2023-04-21" .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/description> "\nTODO: Introduction (markdown)\n"@en .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/title> "PAD, the Platform Assertion Document Framework" .
+<http://purl.org/job/pad/> <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" .
+<http://purl.org/job/pad/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://www.w3.org/2004/03/trix/rdfg-1/Graph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#DateTime> .
+<http://www.w3.org/2001/XMLSchema#DateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/created> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#label> "Created On"@en .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/Agent> .
+<http://purl.org/dc/terms/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#IRI> .
+<http://www.w3.org/2001/XMLSchema#IRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/license> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#label> "License"@en .
+# 
+# http://purl.org/job/pad/hasAssertion
+<http://purl.org/job/pad/hasAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/pad/hasAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/job/pad/hasAssertion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/pad/PAD> .
+<http://purl.org/job/pad/hasAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/pad/Assertion> .
+<http://purl.org/job/pad/Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/pad/hasAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to an Assertion."@en .
+<http://purl.org/job/pad/hasAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "has Assertion"@en .
+# 
+# http://purl.org/job/pad/hasProvenance
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/pad/PAD> .
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/pad/Provenance> .
+<http://purl.org/job/pad/Provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#IRI> .
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to the Provenance of the Assertion."@en .
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to the source code by which it was generated."@en .
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#label> "has Provenance"@en .
+<http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#label> "source Code"@en .
+# 
+# http://purl.org/job/pad/hasPubInfo
+<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/pad/PAD> .
+<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/pad/DocInfo> .
+<http://purl.org/job/pad/DocInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to its PADInfo."@en .
+<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/2000/01/rdf-schema#label> ""@en .
+# 
+# http://purl.org/job/pad/hasSourceAssertion
+<http://purl.org/job/pad/hasSourceAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/pad/hasSourceAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/job/pad/hasSourceAssertion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/pad/Assertion> .
+<http://purl.org/job/pad/hasSourceAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/pad/Assertion> .
+<http://purl.org/job/pad/hasSourceAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion to a source Assertion where its data originated."@en .
+<http://purl.org/job/pad/hasSourceAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "has Source Assertion"@en .
+# 
+# http://purl.org/job/pad/hasSourcePad
+<http://purl.org/job/pad/hasSourcePad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/pad/hasSourcePad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/job/pad/hasSourcePad> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/pad/PAD> .
+<http://purl.org/job/pad/hasSourcePad> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/pad/PAD> .
+<http://purl.org/job/pad/hasSourcePad> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to a source Platform Assertion Document where its data originated."@en .
+<http://purl.org/job/pad/hasSourcePad> <http://www.w3.org/2000/01/rdf-schema#label> "has Source PAD"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/Agent
+# 
+# http://purl.org/job/pad/Assertion
+# 
+# http://purl.org/job/pad/DocInfo
+# 
+# http://purl.org/job/pad/PAD
+<http://purl.org/job/pad/PAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/pad/PAD> <http://www.w3.org/2000/01/rdf-schema#comment> "A Platform Assertion Document, providing machine readable, tracable way to codify information about scholarly communication platforms."@en .
+<http://purl.org/job/pad/PAD> <http://www.w3.org/2000/01/rdf-schema#label> "Platform Assertion Document"@en .
+# 
+# http://purl.org/job/pad/Provenance
+# 
+# http://www.w3.org/2001/XMLSchema#DateTime
+# 
+# http://www.w3.org/2001/XMLSchema#IRI
+# 
+# http://www.w3.org/2004/03/trix/rdfg-1/Graph
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/job/pad/
+<http://purl.org/job/pad/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<https://creativecommons.org/publicdomain/zero/1.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://purl.org/job/pad/Assertion
+<http://purl.org/job/pad/Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/pad/Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+# 
+# http://purl.org/job/pad/Provenance
+<http://purl.org/job/pad/Provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/pad/Provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+# 
+# http://purl.org/job/pad/PubInfo
+<http://purl.org/job/pad/PubInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/pad/PubInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://purl.org/job/pad/PubInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Graph that contains statements about a Platform Assertion Document."@en .
+<http://purl.org/job/pad/PubInfo> <http://www.w3.org/2000/01/rdf-schema#label> "PADInfo"@en .
+# 
+# https://creativecommons.org/publicdomain/zero/1.0/
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/creator> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#label> "Creator"@en .
+# 
+<http://purl.org/job/pad/Assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Graph that contains statements about a platform."@en .
+<http://purl.org/job/pad/Assertion> <http://www.w3.org/2000/01/rdf-schema#label> "Assertion"@en .
+# 
+<http://purl.org/job/pad/Provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Graph that contains statements about an Assertion."@en .
+<http://purl.org/job/pad/Provenance> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,18 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "SCPO, the Scholarly Communication Platform Ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
+:agent0 a prov:Agent; foaf:name "Bram van den Boomen".
+:agent1 a prov:Agent; foaf:name "Ludo Waltman".
+:agent2 a prov:Agent; foaf:name "Nees-Jan van Eck".
+:agent3 a prov:Agent; foaf:name "Serge Horbach".
+:agent4 a prov:Agent; foaf:name "Tony Ross-Hellauer".

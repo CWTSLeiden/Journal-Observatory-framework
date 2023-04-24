@@ -1,0 +1,208 @@
+@prefix : <http://purl.org/job/pad/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/job/pad/> .
+
+<http://purl.org/job/pad/> rdf:type owl:Ontology ;
+                            <http://purl.org/dc/terms/abstract> """
+TODO: Abstract
+"""@en ;
+                            <http://purl.org/dc/terms/creator> "Bram van den Boomen" ,
+                                                               "Ludo Waltman" ,
+                                                               "Nees-Jan van Eck" ,
+                                                               "Serge Horbach" ,
+                                                               "Tony Ross-Hellauer" ;
+                            <http://purl.org/dc/terms/date> "2023-04-21" ;
+                            <http://purl.org/dc/terms/description> """
+TODO: Introduction (markdown)
+"""@en ;
+                            <http://purl.org/dc/terms/title> "PAD, the Platform Assertion Document Framework" ;
+                            <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" ;
+                            owl:versionInfo "0.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
+                                   rdfs:range xsd:DateTime ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/created> ;
+                                   rdfs:label "Created On"@en .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
+                                   rdfs:range <http://purl.org/dc/terms/Agent> .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
+                                   rdfs:range xsd:IRI ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/license> ;
+                                   rdfs:label "License"@en .
+
+
+###  http://purl.org/job/pad/hasAssertion
+:hasAssertion rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :PAD ;
+              rdfs:range :Assertion ;
+              rdfs:comment "The property relating a Platform Assertion Document to an Assertion."@en ;
+              rdfs:label "has Assertion"@en .
+
+
+###  http://purl.org/job/pad/hasProvenance
+:hasProvenance rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :PAD ;
+               rdfs:range :Provenance ,
+                          xsd:IRI ;
+               rdfs:comment "The property relating a Platform Assertion Document to the Provenance of the Assertion."@en ,
+                            "The property relating a Platform Assertion Document to the source code by which it was generated."@en ;
+               rdfs:label "has Provenance"@en ,
+                          "source Code"@en .
+
+
+###  http://purl.org/job/pad/hasPubInfo
+:hasPubInfo rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :PAD ;
+            rdfs:range :DocInfo ;
+            rdfs:comment "The property relating a Platform Assertion Document to its PADInfo."@en ;
+            rdfs:label ""@en .
+
+
+###  http://purl.org/job/pad/hasSourceAssertion
+:hasSourceAssertion rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :Assertion ;
+                    rdfs:range :Assertion ;
+                    rdfs:comment "The property relating a Platform Assertion to a source Assertion where its data originated."@en ;
+                    rdfs:label "has Source Assertion"@en .
+
+
+###  http://purl.org/job/pad/hasSourcePad
+:hasSourcePad rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :PAD ;
+              rdfs:range :PAD ;
+              rdfs:comment "The property relating a Platform Assertion Document to a source Platform Assertion Document where its data originated."@en ;
+              rdfs:label "has Source PAD"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/Agent
+<http://purl.org/dc/terms/Agent> rdf:type owl:Class .
+
+
+###  http://purl.org/job/pad/Assertion
+:Assertion rdf:type owl:Class .
+
+
+###  http://purl.org/job/pad/DocInfo
+:DocInfo rdf:type owl:Class .
+
+
+###  http://purl.org/job/pad/PAD
+:PAD rdf:type owl:Class ;
+     rdfs:comment "A Platform Assertion Document, providing machine readable, tracable way to codify information about scholarly communication platforms."@en ;
+     rdfs:label "Platform Assertion Document"@en .
+
+
+###  http://purl.org/job/pad/Provenance
+:Provenance rdf:type owl:Class .
+
+
+###  http://www.w3.org/2001/XMLSchema#DateTime
+xsd:DateTime rdf:type owl:Class .
+
+
+###  http://www.w3.org/2001/XMLSchema#IRI
+xsd:IRI rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/Graph
+<http://www.w3.org/2004/03/trix/rdfg-1/Graph> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/job/pad/
+<http://purl.org/job/pad/> rdf:type owl:NamedIndividual ;
+                           <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+
+
+###  http://purl.org/job/pad/Assertion
+:Assertion rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+
+
+###  http://purl.org/job/pad/Provenance
+:Provenance rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+
+
+###  http://purl.org/job/pad/PubInfo
+:PubInfo rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
+         rdfs:comment "Graph that contains statements about a Platform Assertion Document."@en ;
+         rdfs:label "PADInfo"@en .
+
+
+###  https://creativecommons.org/publicdomain/zero/1.0/
+<https://creativecommons.org/publicdomain/zero/1.0/> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/creator> rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/creator> ;
+                                   rdfs:label "Creator"@en .
+
+
+:Assertion rdfs:comment "Graph that contains statements about a platform."@en ;
+           rdfs:label "Assertion"@en .
+
+
+:Provenance rdfs:comment "Graph that contains statements about an Assertion."@en ;
+            rdfs:label "Provenance"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

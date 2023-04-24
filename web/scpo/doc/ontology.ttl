@@ -1,0 +1,774 @@
+@prefix : <http://purl.org/job/scpo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/job/scpo/> .
+
+<http://purl.org/job/scpo/> rdf:type owl:Ontology ;
+                             <http://purl.org/dc/terms/abstract> """
+TODO: Abstract
+"""@en ;
+                             <http://purl.org/dc/terms/creator> "Bram van den Boomen" ,
+                                                                "Ludo Waltman" ,
+                                                                "Nees-Jan van Eck" ,
+                                                                "Serge Horbach" ,
+                                                                "Tony Ross-Hellauer" ;
+                             <http://purl.org/dc/terms/date> "2023-04-21" ;
+                             <http://purl.org/dc/terms/description> """
+TODO: Introduction (markdown)
+"""@en ;
+                             <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                             <http://purl.org/dc/terms/title> "SCPO, the Scholarly Communication Platform Ontology" ;
+                             <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" ;
+                             owl:versionInfo "0.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://prismstandard.org/namespaces/basic/2.0/doi
+<http://prismstandard.org/namespaces/basic/2.0/doi> rdfs:comment "Digital Object Identifier (DOI)"@en ;
+                                                    rdfs:label "DOI"@en ;
+                                                    rdf:type owl:AnnotationProperty ;
+                                                    rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://prismstandard.org/namespaces/basic/2.0/eIssn
+<http://prismstandard.org/namespaces/basic/2.0/eIssn> rdfs:comment "Electronic International Standard Serial Number (ISSN)"@en ;
+                                                      rdfs:label "Electronic ISSN"@en ;
+                                                      rdf:type owl:AnnotationProperty ;
+                                                      rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://prismstandard.org/namespaces/basic/2.0/issn
+<http://prismstandard.org/namespaces/basic/2.0/issn> rdfs:comment "Print International Standard Serial Number (ISSN)"@en ;
+                                                     rdfs:label "Print ISSN"@en ;
+                                                     rdf:type owl:AnnotationProperty ;
+                                                     rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/identifier> ;
+                                      rdfs:label "Identifier"@en .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/license> ;
+                                   rdfs:label "License"@en .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/publisher> ;
+                                     rdfs:label "has Publisher"@en ;
+                                     rdf:type owl:AnnotationProperty ;
+                                     rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> rdf:type owl:AnnotationProperty ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/relation> ;
+                                    rdfs:label "has Relation"@en .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/job/scpo/hasCrossrefId
+:hasCrossrefId rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://purl.org/job/scpo/hasDimensionsId
+:hasDimensionsId rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://purl.org/job/scpo/hasFatcatId
+:hasFatcatId rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://purl.org/job/scpo/hasMagId
+:hasMagId rdf:type owl:AnnotationProperty ;
+          rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://purl.org/job/scpo/hasOpenalexId
+:hasOpenalexId rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://purl.org/job/scpo/hasScopusId
+:hasScopusId rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://purl.org/job/scpo/hasSherpaRomeoId
+:hasSherpaRomeoId rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/spar/fabio/hasIssnL
+<http://purl.org/spar/fabio/hasIssnL> rdfs:comment "Linking International Standard Serial Number (ISSN)"@en ;
+                                      rdfs:label "Linking ISSN"@en ;
+                                      rdf:type owl:AnnotationProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+###  http://www.wikidata.org/entity/id
+<http://www.wikidata.org/entity/id> rdfs:label "Wikidata Identifier"@en ;
+                                    rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/job/scpo/anonymousTo
+:anonymousTo rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://purl.org/spar/pro/PublishingRole> ;
+             rdfs:range <http://purl.org/spar/pro/PublishingRole> ;
+             rdfs:comment "Relation signifying that an agent is not aware of the identity of another agent in an evaluation process."@en ;
+             rdfs:label "Anonymous To"@en .
+
+
+###  http://purl.org/job/scpo/appliesToVersion
+:appliesToVersion rdf:type owl:ObjectProperty ;
+                  rdfs:domain <http://purl.org/spar/pro/Policy> ;
+                  rdfs:range <http://purl.org/spar/pso/PublicationStatus> ;
+                  rdfs:comment "Relation signifying the version of a scholarly work to which a policy applies."@en ;
+                  rdfs:label "applies to Version"@en .
+
+
+###  http://purl.org/job/scpo/covers
+:covers rdf:type owl:ObjectProperty ;
+        rdfs:domain :Policy ;
+        rdfs:range :Work ;
+        rdfs:comment "Relation signifying that a policy includes restrictions or allowances on a scholarly work."@en ;
+        rdfs:label "covers"@en .
+
+
+###  http://purl.org/job/scpo/hasArticleProcessingCharge
+:hasArticleProcessingCharge rdf:type owl:ObjectProperty ;
+                            rdfs:domain :PublicationPolicy ;
+                            rdfs:range :ArticleProcessingCharge ;
+                            rdfs:comment "Relation linking a publication policy to an article processing charge."@en ;
+                            rdfs:label "has Article Processing Charge"@en .
+
+
+###  http://purl.org/job/scpo/hasCopyrightOwner
+:hasCopyrightOwner rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Policy ;
+                   rdfs:range <http://purl.org/spar/pro/PublishingRole> ;
+                   rdfs:comment "Relation linking a publication policy to a copyright owner."@en ;
+                   rdfs:label "has Copyright Owner"@en .
+
+
+###  http://purl.org/job/scpo/hasInitiator
+:hasInitiator rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :involves ;
+              rdfs:domain :EvaluationPolicy ;
+              rdfs:range <http://purl.org/spar/pro/PublishingRole> ;
+              rdfs:comment "Relation linking an evaluation policy to the agent that initiates an evaluation."@en ;
+              rdfs:label "has Initiator"@en .
+
+
+###  http://purl.org/job/scpo/hasPlatformType
+:hasPlatformType rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Platform ;
+                 rdfs:range xsd:PlatformType ;
+                 rdfs:comment "Relation linking a platform to a platform type."@en ;
+                 rdfs:label "has Platform Type"@en .
+
+
+###  http://purl.org/job/scpo/hasPolicy
+:hasPolicy rdf:type owl:ObjectProperty ;
+           rdfs:domain :Platform ,
+                       :PlatformType ;
+           rdfs:range :Policy ;
+           rdfs:comment "Relation linking a platform to a policy."@en ;
+           rdfs:label "has Policy"@en .
+
+
+###  http://purl.org/job/scpo/hasPostPublicationCommenting
+:hasPostPublicationCommenting rdf:type owl:ObjectProperty ;
+                              rdfs:domain :EvaluationPolicy ;
+                              rdfs:range :PostPublicationCommenting ;
+                              rdfs:comment "Relation signifying whether an evaluation policy allows post publication commenting."@en ;
+                              rdfs:label "Has Post Publication Commenting"@en .
+
+
+###  http://purl.org/job/scpo/identityPubliclyAccessible
+:identityPubliclyAccessible rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :publiclyAccessible ;
+                            rdfs:domain <http://purl.org/spar/pro/PublishingRole> ;
+                            rdfs:range :PublicAccessibility ;
+                            rdfs:comment "Relation signifying the public accessibility of the identity of an agent."@en ;
+                            rdfs:label "identity Publicly Accessible"@en .
+
+
+###  http://purl.org/job/scpo/interactsWith
+:interactsWith rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ;
+               rdfs:domain <http://purl.org/spar/pro/PublishingRole> ;
+               rdfs:range <http://purl.org/spar/pro/PublishingRole> ;
+               rdfs:comment "Relation that signifies that an agent can interact with another agent during the review process."@en ;
+               rdfs:label "interacts With"@en .
+
+
+###  http://purl.org/job/scpo/involves
+:involves rdf:type owl:ObjectProperty ;
+          rdfs:domain :Policy ;
+          rdfs:range <http://purl.org/spar/pro/PublishingRole> ;
+          rdfs:comment "Relation signifying that a policy involves an agent."@en ;
+          rdfs:label "involves"@en .
+
+
+###  http://purl.org/job/scpo/optInBy
+:optInBy rdf:type owl:ObjectProperty ;
+         rdfs:domain :OptIn ;
+         rdfs:range <http://purl.org/spar/pro/PublishingRole> ;
+         rdfs:comment "Relation signifying the permission of an agent to make a piece of information, such as a scholarly work or the identity of an agent, publicly accessible."@en ;
+         rdfs:label "opt-In By"@en .
+
+
+###  http://purl.org/job/scpo/publiclyAccessible
+:publiclyAccessible rdf:type owl:ObjectProperty ;
+                    rdfs:range :PublicAccessibility ;
+                    rdfs:comment "Relation signifying the public accessibility of a piece of information."@en ;
+                    rdfs:label "publicly Accessible"@en .
+
+
+###  http://purl.org/job/scpo/workPubliclyAccessible
+:workPubliclyAccessible rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :publiclyAccessible ;
+                        rdfs:domain :Work ;
+                        rdfs:range :PublicAccessibility ;
+                        rdfs:comment "Relation signifying the public accessibility  of a scholarly work."@en ;
+                        rdfs:label "Work Publicly Accessible"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/job/scpo/hasCrossrefId
+:hasCrossrefId rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Platform ;
+               rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/job/scpo/hasDimensionsId
+:hasDimensionsId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Platform ;
+                 rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/job/scpo/hasFatcatId
+:hasFatcatId rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Platform ;
+             rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/job/scpo/hasMagId
+:hasMagId rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Platform ;
+          rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/job/scpo/hasOpenalexId
+:hasOpenalexId rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Platform ;
+               rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/job/scpo/hasScopusId
+:hasScopusId rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Platform ;
+             rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/job/scpo/hasSherpaRomeoId
+:hasSherpaRomeoId rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Platform ;
+                  rdfs:range xsd:anyURI .
+
+
+###  http://purl.org/job/scpo/isOpenAccess
+:isOpenAccess rdf:type owl:DatatypeProperty ;
+              rdfs:domain :PublicationPolicy ;
+              rdfs:range xsd:boolean ;
+              rdfs:comment "Relation signifying whether a publication policy suscports open access publishing."@en ;
+              rdfs:label "is Open Access"@en .
+
+
+###  http://purl.org/job/scpo/publicationCondition
+:publicationCondition rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :PublicationElsewhereAllowedPolicy ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Relation describing a condition for allowing publication of a scholarly work on other platforms."@en ;
+                      rdfs:label "Publication Condition"@en .
+
+
+###  http://purl.org/job/scpo/publicationLocation
+:publicationLocation rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :PublicationElsewhereAllowedPolicy ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Relation describing a condition for allowing publication of a scholarly work on specific types of other platforms."@en ;
+                     rdfs:label "Publication Location"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/LicenseDocument
+<http://purl.org/dc/terms/LicenseDocument> rdf:type owl:Class ;
+                                           rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
+                                           rdfs:label "License"@en .
+
+
+###  http://purl.org/dc/terms/licenseDocument
+<http://purl.org/dc/terms/licenseDocument> rdf:type owl:Class .
+
+
+###  http://purl.org/job/scpo/ArticleProcessingCharge
+:ArticleProcessingCharge rdf:type owl:Class ;
+                         rdfs:comment "The article processing charge (APC) that a platform charges to the authors of a scholarly work."@en ;
+                         rdfs:label "Article Processing Charge"@en .
+
+
+###  http://purl.org/job/scpo/EvaluationPolicy
+:EvaluationPolicy rdf:type owl:Class ;
+                  rdfs:subClassOf :Policy ;
+                  rdfs:comment "A policy of a platform regarding the evaluation of a scholarly work."@en ;
+                  rdfs:label "Evaluation Policy"@en .
+
+
+###  http://purl.org/job/scpo/OptIn
+:OptIn rdf:type owl:Class ;
+       rdfs:comment "A piece of information, such as a scholarly work or the identity of an agent, can be made publicly accessible only with the permissions of the relevant agents."@en ;
+       rdfs:label "Opt-In"@en .
+
+
+###  http://purl.org/job/scpo/Platform
+:Platform rdf:type owl:Class ;
+          rdfs:comment "A platform for scholarly communication, in particular for the publication and/or evaluation of scholarly works, such as a scientific journal, a preprint server or a peer review platform."@en ;
+          rdfs:label "Platform"@en .
+
+
+###  http://purl.org/job/scpo/PlatformType
+:PlatformType rdf:type owl:Class ;
+              rdfs:comment "A platform type, such as scientific journal, preprint server or peer review platform."@en ;
+              rdfs:label "Platform Type"@en .
+
+
+###  http://purl.org/job/scpo/Policy
+:Policy rdf:type owl:Class ;
+        rdfs:comment "A policy of a platform."@en ;
+        rdfs:label "Policy"@en .
+
+
+###  http://purl.org/job/scpo/PostPublicationCommenting
+:PostPublicationCommenting rdf:type owl:Class ;
+                           rdfs:subClassOf :Work ;
+                           rdfs:comment "Allowance of post publication commenting on a scholarly work."@en ;
+                           rdfs:isDefinedBy <https://osf.io/7j6ck> ;
+                           rdfs:label "Post Publication Commenting"@en .
+
+
+###  http://purl.org/job/scpo/PublicAccessibility
+:PublicAccessibility rdf:type owl:Class ;
+                     rdfs:comment "The public accessibility of a piece of information, such as a scholarly work or the identity of an agent."@en ;
+                     rdfs:label "Public Accessibility"@en .
+
+
+###  http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy
+:PublicationElsewhereAllowedPolicy rdf:type owl:Class ;
+                                   rdfs:subClassOf :PublicationElsewherePolicy ;
+                                   rdfs:comment "A policy of a platform that allows the publication of a scholarly work on other platforms."@en ;
+                                   rdfs:label "Publication Elsewhere Allowed Policy"@en .
+
+
+###  http://purl.org/job/scpo/PublicationElsewhereMandatoryPolicy
+:PublicationElsewhereMandatoryPolicy rdf:type owl:Class ;
+                                     rdfs:subClassOf :PublicationElsewherePolicy ;
+                                     rdfs:comment "A policy of a platform that mandates the publication of a scholarly work on other platforms."@en ;
+                                     rdfs:label "Publication Elsewhere Mandatory Policy"@en .
+
+
+###  http://purl.org/job/scpo/PublicationElsewherePolicy
+:PublicationElsewherePolicy rdf:type owl:Class ;
+                            rdfs:subClassOf :Policy ;
+                            rdfs:comment "A policy of a platform regarding the publication of a scholarly work on other platforms."@en ;
+                            rdfs:label "Publication Elsewhere Policy"@en .
+
+
+###  http://purl.org/job/scpo/PublicationElsewhereProhibitedPolicy
+:PublicationElsewhereProhibitedPolicy rdf:type owl:Class ;
+                                      rdfs:subClassOf :PublicationElsewherePolicy ;
+                                      rdfs:comment "A policy of a platform that prohibits the publication of a scholarly work on other platforms."@en ;
+                                      rdfs:label "Publication Elsewhere Prohibited Policy"@en .
+
+
+###  http://purl.org/job/scpo/PublicationPolicy
+:PublicationPolicy rdf:type owl:Class ;
+                   rdfs:subClassOf :Policy ;
+                   rdfs:comment "A policy of a platform regarding the publication of a scholarly work."@en ;
+                   rdfs:label "Publication Policy"@en .
+
+
+###  http://purl.org/job/scpo/Work
+:Work rdf:type owl:Class ;
+      rdfs:comment "A scholarly work, such as a research article, review report or review summary."@en ;
+      rdfs:label "Work"@en .
+
+
+###  http://purl.org/job/scpo/postPublicationCommenting
+:postPublicationCommenting rdf:type owl:Class .
+
+
+###  http://purl.org/spar/pro/Policy
+<http://purl.org/spar/pro/Policy> rdf:type owl:Class .
+
+
+###  http://purl.org/spar/pro/PublishingRole
+<http://purl.org/spar/pro/PublishingRole> rdf:type owl:Class ;
+                                          rdfs:isDefinedBy <http://purl.org/spar/pro/PublishingRole> ;
+                                          rdfs:label "Publishing Role"@en .
+
+
+###  http://purl.org/spar/pso/PublicationStatus
+<http://purl.org/spar/pso/PublicationStatus> rdf:type owl:Class .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Class
+rdf:Class rdf:type owl:Class .
+
+
+###  http://www.w3.org/2001/XMLSchema#PlatformType
+xsd:PlatformType rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class ;
+                                         rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/Organization> ;
+                                         rdfs:label "Organization"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/job/scpo/Accessible
+:Accessible rdf:type owl:NamedIndividual ,
+                     :PublicAccessibility ;
+            rdfs:comment "A piece of information, such as a scholarly work or the identity of an agent, can be made publicly accessible."@en ;
+            rdfs:label "Accessible"@en .
+
+
+###  http://purl.org/job/scpo/AuthorEditorCommunication
+:AuthorEditorCommunication rdf:type owl:NamedIndividual ,
+                                    :Work ;
+                           rdfs:comment "Communication between the author and editor of a scholarly work, including editor decision letter and reviewer responses (rebuttals)."@en ;
+                           rdfs:isDefinedBy <https://osf.io/7j6ck> ;
+                           rdfs:label "Author-Editor Communication"@en .
+
+
+###  http://purl.org/job/scpo/NotAccessible
+:NotAccessible rdf:type owl:NamedIndividual ,
+                        :PublicAccessibility ;
+               rdfs:comment "A piece of information, such as a scholarly work or the identity of an agent, can not be made publicly accessible."@en ;
+               rdfs:label "Not Accessible"@en .
+
+
+###  http://purl.org/job/scpo/ReviewReport
+:ReviewReport rdf:type owl:NamedIndividual ,
+                       :Work ;
+              rdfs:comment "Full content of the peer review of a scholarly work."@en ;
+              rdfs:isDefinedBy <https://osf.io/7j6ck> ;
+              rdfs:label "Review Report"@en .
+
+
+###  http://purl.org/job/scpo/ReviewSummary
+:ReviewSummary rdf:type owl:NamedIndividual ,
+                        :Work ;
+               rdfs:comment "Summarized content of the peer review of a scholarly work by a peer reviewer."@en ;
+               rdfs:isDefinedBy <https://osf.io/7j6ck> .
+
+
+###  http://purl.org/job/scpo/SubmittedManuscript
+:SubmittedManuscript rdf:type owl:NamedIndividual ,
+                              :Work ;
+                     rdfs:comment "A scholarly work submitted to a platform and not yet accepted or rejected for publication on the platform."@en ;
+                     rdfs:isDefinedBy <https://osf.io/7j6ck> ;
+                     rdfs:label "Submitted Manuscript"@en .
+
+
+###  http://purl.org/job/scpo/accepted-for-publication
+:accepted-for-publication rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/spar/pso/PublicationStatus> ;
+                          rdfs:comment "The status of a scholarly work that has been accepted for publication on a platform."@en ;
+                          rdfs:label "Accepted version"@en .
+
+
+###  http://purl.org/job/scpo/postPublicationCommentingClosed
+:postPublicationCommentingClosed rdf:type owl:NamedIndividual ,
+                                          :postPublicationCommenting ;
+                                 rdfs:comment "Post publication commenting is closed."@en ;
+                                 rdfs:isDefinedBy <https://osf.io/7j6ck> ;
+                                 rdfs:label "Post Publication Commenting Closed"@en .
+
+
+###  http://purl.org/job/scpo/postPublicationCommentingOnInvitation
+:postPublicationCommentingOnInvitation rdf:type owl:NamedIndividual ,
+                                                :postPublicationCommenting ;
+                                       rdfs:comment "Post publication commenting is open on invitation only."@en ;
+                                       rdfs:isDefinedBy <https://osf.io/7j6ck> ;
+                                       rdfs:label "Post Publication Commenting On Invitation"@en .
+
+
+###  http://purl.org/job/scpo/postPublicationCommentingOpen
+:postPublicationCommentingOpen rdf:type owl:NamedIndividual ,
+                                        :postPublicationCommenting ;
+                               rdfs:comment "Post publication commenting is open."@en ;
+                               rdfs:isDefinedBy <https://osf.io/7j6ck> ;
+                               rdfs:label "Post Publication Commenting Open"@en .
+
+
+###  http://purl.org/spar/pro/Society
+<http://purl.org/spar/pro/Society> rdf:type owl:NamedIndividual ,
+                                            <http://xmlns.com/foaf/0.1/Organization> ;
+                                   rdfs:comment "A scholarly society."@en ;
+                                   rdfs:label "Society"@en .
+
+
+###  http://purl.org/spar/pro/author
+<http://purl.org/spar/pro/author> rdf:type owl:NamedIndividual ,
+                                           <http://purl.org/spar/pro/PublishingRole> ;
+                                  rdfs:label "Author"@en .
+
+
+###  http://purl.org/spar/pro/editor
+<http://purl.org/spar/pro/editor> rdf:type owl:NamedIndividual ,
+                                           <http://purl.org/spar/pro/PublishingRole> ;
+                                  rdfs:label "Editor"@en .
+
+
+###  http://purl.org/spar/pro/peer-reviewer
+<http://purl.org/spar/pro/peer-reviewer> rdf:type owl:NamedIndividual ,
+                                                  <http://purl.org/spar/pro/PublishingRole> ;
+                                         rdfs:label "Peer Reviewer"@en .
+
+
+###  http://purl.org/spar/pro/publisher
+<http://purl.org/spar/pro/publisher> rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/spar/pro/PublishingRole> ,
+                                              <http://xmlns.com/foaf/0.1/Organization> ;
+                                     rdfs:label "Publisher"@en .
+
+
+###  http://purl.org/spar/pso/PublicationStatus
+<http://purl.org/spar/pso/PublicationStatus> rdf:type owl:NamedIndividual ,
+                                                      rdf:Class .
+
+
+###  http://purl.org/spar/pso/published
+<http://purl.org/spar/pso/published> rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/spar/pso/PublicationStatus> ;
+                                     rdfs:comment "The status of a scholarly work that has been published on a platform in its final form."@en ;
+                                     rdfs:label "Published version"@en .
+
+
+###  http://purl.org/spar/pso/submitted
+<http://purl.org/spar/pso/submitted> rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/spar/pso/PublicationStatus> ;
+                                     rdfs:comment "The status of a scholarly work that has been submitted to a platform and that has not yet been accepted or rejected for publication on the platform."@en ;
+                                     rdfs:label "Submitted version"@en .
+
+
+###  https://creativecommons.org/licenses/by-nc-nd/4.0
+<https://creativecommons.org/licenses/by-nc-nd/4.0> rdf:type owl:NamedIndividual ,
+                                                             <http://purl.org/dc/terms/licenseDocument> ;
+                                                    owl:sameAs <https://creativecommons.org/licenses/by-nc-nd/4.0/> ;
+                                                    rdfs:label "CC BY-NC-ND"@en .
+
+
+###  https://creativecommons.org/licenses/by-nc-nd/4.0/
+<https://creativecommons.org/licenses/by-nc-nd/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-nc-nd/4.0/
+<https://creativecommons.org/licenses/by-nc-nd/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-nc-sa/4.0
+<https://creativecommons.org/licenses/by-nc-sa/4.0> rdf:type owl:NamedIndividual ,
+                                                             <http://purl.org/dc/terms/licenseDocument> ;
+                                                    owl:sameAs <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+                                                    rdfs:label "CC BY-NC-SA"@en .
+
+
+###  https://creativecommons.org/licenses/by-nc-sa/4.0/
+<https://creativecommons.org/licenses/by-nc-sa/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-nc-sa/4.0/
+<https://creativecommons.org/licenses/by-nc-sa/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-nc/4.0
+<https://creativecommons.org/licenses/by-nc/4.0> rdf:type owl:NamedIndividual ,
+                                                          <http://purl.org/dc/terms/licenseDocument> ;
+                                                 owl:sameAs <https://creativecommons.org/licenses/by-nc/4.0/> ;
+                                                 rdfs:label "CC BY-NC"@en .
+
+
+###  https://creativecommons.org/licenses/by-nc/4.0/
+<https://creativecommons.org/licenses/by-nc/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-nc/4.0/
+<https://creativecommons.org/licenses/by-nc/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-nd/4.0
+<https://creativecommons.org/licenses/by-nd/4.0> rdf:type owl:NamedIndividual ,
+                                                          <http://purl.org/dc/terms/licenseDocument> ;
+                                                 owl:sameAs <https://creativecommons.org/licenses/by-nd/4.0/> ;
+                                                 rdfs:label "CC BY-ND"@en .
+
+
+###  https://creativecommons.org/licenses/by-nd/4.0/
+<https://creativecommons.org/licenses/by-nd/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-nd/4.0/
+<https://creativecommons.org/licenses/by-nd/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-sa/4.0
+<https://creativecommons.org/licenses/by-sa/4.0> rdf:type owl:NamedIndividual ,
+                                                          <http://purl.org/dc/terms/licenseDocument> ;
+                                                 owl:sameAs <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                                 rdfs:label "CC BY-SA"@en .
+
+
+###  https://creativecommons.org/licenses/by-sa/4.0/
+<https://creativecommons.org/licenses/by-sa/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by-sa/4.0/
+<https://creativecommons.org/licenses/by-sa/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by/4.0
+<https://creativecommons.org/licenses/by/4.0> rdf:type owl:NamedIndividual ,
+                                                       <http://purl.org/dc/terms/licenseDocument> ;
+                                              owl:sameAs <https://creativecommons.org/licenses/by/4.0/> ;
+                                              rdfs:label "CC BY"@en .
+
+
+###  https://creativecommons.org/licenses/by/4.0/
+<https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/licenses/by/4.0/
+<https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/publicdomain/zero/1.0
+<https://creativecommons.org/publicdomain/zero/1.0> rdf:type owl:NamedIndividual ,
+                                                             <http://purl.org/dc/terms/licenseDocument> ;
+                                                    owl:sameAs <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                                    rdfs:label "CC0"@en .
+
+
+###  https://creativecommons.org/publicdomain/zero/1.0/
+<https://creativecommons.org/publicdomain/zero/1.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://creativecommons.org/publicdomain/zero/1.0/
+<https://creativecommons.org/publicdomain/zero/1.0/> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+
+:hasCrossrefId rdfs:comment "Relation linking a platform to its Crossref identifier."@en ;
+               rdfs:label "Crossref Identifier"@en .
+
+
+:hasDimensionsId rdfs:comment "Relation linking a platform to its Dimensions identifier."@en ;
+                 rdfs:label "Dimensions Identifier"@en .
+
+
+:hasFatcatId rdfs:comment "Relation linking a platform to its FatCat identifier."@en ;
+             rdfs:label "Fatcat Identifier"@en .
+
+
+:hasMagId rdfs:comment "Relation linking a platform to its Microsoft Academic Graph identifier."@en ;
+          rdfs:label "Microsoft Academic Graph Identifier"@en .
+
+
+:hasOpenalexId rdfs:comment "Relation linking a platform to its OpenAlex identifier."@en ;
+               rdfs:label "OpenAlex Identifier"@en .
+
+
+:hasScopusId rdfs:comment "Relation linking a platform to its Scopus identifier."@en ;
+             rdfs:label "Scopus Identifier"@en .
+
+
+:hasSherpaRomeoId rdfs:comment "Relation linking a platform to its Sherpa Romeo identifier."@en ;
+                  rdfs:label "Sherpa-Romeo Identifier"@en .
+
+
+<http://purl.org/spar/fabio/hasEmbargoDuration> rdfs:comment "The duration of the period in which a scholarly work is under embargo (i.e., the work has been published on a platform but has not yet been made openly accessible)."@en ;
+                                                rdfs:label "has Embargo Duration"@en .
+
+
+<http://purl.org/spar/pso/PublicationStatus> rdfs:comment "A state or condition that a work may have that relates to the publication of such work."@en ;
+                                             rdfs:label "Publication Status"@en .
+
+
+<https://schema.org/name> rdfs:label "Name"@en .
+
+
+<https://schema.org/price> rdfs:label "Price"@en .
+
+
+<https://schema.org/priceCurrency> rdfs:label "Currency"@en .
+
+
+<https://schema.org/url> rdfs:label "URL"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

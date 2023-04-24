@@ -1,0 +1,1244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/job/scpo/"
+     xml:base="http://purl.org/job/scpo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:scpo="http://purl.org/job/scpo/"
+     xmlns:basic="http://prismstandard.org/namespaces/basic/2.0/"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:entity="http://www.wikidata.org/entity/">
+    <owl:Ontology rdf:about="http://purl.org/job/scpo/">
+        <terms:abstract xml:lang="en">
+TODO: Abstract
+</terms:abstract>
+        <terms:creator>Bram van den Boomen</terms:creator>
+        <terms:creator>Ludo Waltman</terms:creator>
+        <terms:creator>Nees-Jan van Eck</terms:creator>
+        <terms:creator>Serge Horbach</terms:creator>
+        <terms:creator>Tony Ross-Hellauer</terms:creator>
+        <terms:date>2023-04-21</terms:date>
+        <terms:description xml:lang="en">
+TODO: Introduction (markdown)
+</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:title>SCPO, the Scholarly Communication Platform Ontology</terms:title>
+        <bibo:status>Ontology Specification Draft</bibo:status>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://prismstandard.org/namespaces/basic/2.0/doi -->
+
+
+    <owl:AnnotationProperty rdf:about="http://prismstandard.org/namespaces/basic/2.0/doi">
+        <rdfs:comment xml:lang="en">Digital Object Identifier (DOI)</rdfs:comment>
+        <rdfs:label xml:lang="en">DOI</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://prismstandard.org/namespaces/basic/2.0/eIssn -->
+
+
+    <owl:AnnotationProperty rdf:about="http://prismstandard.org/namespaces/basic/2.0/eIssn">
+        <rdfs:comment xml:lang="en">Electronic International Standard Serial Number (ISSN)</rdfs:comment>
+        <rdfs:label xml:lang="en">Electronic ISSN</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://prismstandard.org/namespaces/basic/2.0/issn -->
+
+
+    <owl:AnnotationProperty rdf:about="http://prismstandard.org/namespaces/basic/2.0/issn">
+        <rdfs:comment xml:lang="en">Print International Standard Serial Number (ISSN)</rdfs:comment>
+        <rdfs:label xml:lang="en">Print ISSN</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/license"/>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+        <rdfs:label xml:lang="en">has Publisher</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/relation">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:label xml:lang="en">has Relation</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasCrossrefId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/job/scpo/hasCrossrefId">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasDimensionsId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/job/scpo/hasDimensionsId">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasFatcatId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/job/scpo/hasFatcatId">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasMagId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/job/scpo/hasMagId">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasOpenalexId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/job/scpo/hasOpenalexId">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasScopusId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/job/scpo/hasScopusId">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasSherpaRomeoId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/job/scpo/hasSherpaRomeoId">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/hasIssnL -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/spar/fabio/hasIssnL">
+        <rdfs:comment xml:lang="en">Linking International Standard Serial Number (ISSN)</rdfs:comment>
+        <rdfs:label xml:lang="en">Linking ISSN</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.wikidata.org/entity/id -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.wikidata.org/entity/id">
+        <rdfs:label xml:lang="en">Wikidata Identifier</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/job/scpo/anonymousTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/anonymousTo">
+        <rdfs:domain rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:comment xml:lang="en">Relation signifying that an agent is not aware of the identity of another agent in an evaluation process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anonymous To</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/appliesToVersion -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/appliesToVersion">
+        <rdfs:domain rdf:resource="http://purl.org/spar/pro/Policy"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+        <rdfs:comment xml:lang="en">Relation signifying the version of a scholarly work to which a policy applies.</rdfs:comment>
+        <rdfs:label xml:lang="en">applies to Version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/covers -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/covers">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Policy"/>
+        <rdfs:range rdf:resource="http://purl.org/job/scpo/Work"/>
+        <rdfs:comment xml:lang="en">Relation signifying that a policy includes restrictions or allowances on a scholarly work.</rdfs:comment>
+        <rdfs:label xml:lang="en">covers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasArticleProcessingCharge -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/hasArticleProcessingCharge">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/PublicationPolicy"/>
+        <rdfs:range rdf:resource="http://purl.org/job/scpo/ArticleProcessingCharge"/>
+        <rdfs:comment xml:lang="en">Relation linking a publication policy to an article processing charge.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Article Processing Charge</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasCopyrightOwner -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/hasCopyrightOwner">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Policy"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:comment xml:lang="en">Relation linking a publication policy to a copyright owner.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Copyright Owner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasInitiator -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/hasInitiator">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/job/scpo/involves"/>
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/EvaluationPolicy"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:comment xml:lang="en">Relation linking an evaluation policy to the agent that initiates an evaluation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Initiator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasPlatformType -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/hasPlatformType">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#PlatformType"/>
+        <rdfs:comment xml:lang="en">Relation linking a platform to a platform type.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Platform Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasPolicy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/hasPolicy">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/PlatformType"/>
+        <rdfs:range rdf:resource="http://purl.org/job/scpo/Policy"/>
+        <rdfs:comment xml:lang="en">Relation linking a platform to a policy.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasPostPublicationCommenting -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/hasPostPublicationCommenting">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/EvaluationPolicy"/>
+        <rdfs:range rdf:resource="http://purl.org/job/scpo/PostPublicationCommenting"/>
+        <rdfs:comment xml:lang="en">Relation signifying whether an evaluation policy allows post publication commenting.</rdfs:comment>
+        <rdfs:label xml:lang="en">Has Post Publication Commenting</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/identityPubliclyAccessible -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/identityPubliclyAccessible">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/job/scpo/publiclyAccessible"/>
+        <rdfs:domain rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:range rdf:resource="http://purl.org/job/scpo/PublicAccessibility"/>
+        <rdfs:comment xml:lang="en">Relation signifying the public accessibility of the identity of an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">identity Publicly Accessible</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/interactsWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/interactsWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:comment xml:lang="en">Relation that signifies that an agent can interact with another agent during the review process.</rdfs:comment>
+        <rdfs:label xml:lang="en">interacts With</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/involves -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/involves">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Policy"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:comment xml:lang="en">Relation signifying that a policy involves an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/optInBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/optInBy">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/OptIn"/>
+        <rdfs:range rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:comment xml:lang="en">Relation signifying the permission of an agent to make a piece of information, such as a scholarly work or the identity of an agent, publicly accessible.</rdfs:comment>
+        <rdfs:label xml:lang="en">opt-In By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/publiclyAccessible -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/publiclyAccessible">
+        <rdfs:range rdf:resource="http://purl.org/job/scpo/PublicAccessibility"/>
+        <rdfs:comment xml:lang="en">Relation signifying the public accessibility of a piece of information.</rdfs:comment>
+        <rdfs:label xml:lang="en">publicly Accessible</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/workPubliclyAccessible -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/job/scpo/workPubliclyAccessible">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/job/scpo/publiclyAccessible"/>
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Work"/>
+        <rdfs:range rdf:resource="http://purl.org/job/scpo/PublicAccessibility"/>
+        <rdfs:comment xml:lang="en">Relation signifying the public accessibility  of a scholarly work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Publicly Accessible</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/job/scpo/hasCrossrefId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/hasCrossrefId">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasDimensionsId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/hasDimensionsId">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasFatcatId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/hasFatcatId">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasMagId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/hasMagId">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasOpenalexId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/hasOpenalexId">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasScopusId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/hasScopusId">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/hasSherpaRomeoId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/hasSherpaRomeoId">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/isOpenAccess -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/isOpenAccess">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/PublicationPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Relation signifying whether a publication policy suscports open access publishing.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Open Access</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/publicationCondition -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/publicationCondition">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Relation describing a condition for allowing publication of a scholarly work on other platforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Condition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/job/scpo/publicationLocation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/job/scpo/publicationLocation">
+        <rdfs:domain rdf:resource="http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Relation describing a condition for allowing publication of a scholarly work on specific types of other platforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/LicenseDocument -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LicenseDocument">
+        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/licenseDocument -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/licenseDocument"/>
+    
+
+
+    <!-- http://purl.org/job/scpo/ArticleProcessingCharge -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/ArticleProcessingCharge">
+        <rdfs:comment xml:lang="en">The article processing charge (APC) that a platform charges to the authors of a scholarly work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Article Processing Charge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/EvaluationPolicy -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/EvaluationPolicy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/job/scpo/Policy"/>
+        <rdfs:comment xml:lang="en">A policy of a platform regarding the evaluation of a scholarly work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluation Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/OptIn -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/OptIn">
+        <rdfs:comment xml:lang="en">A piece of information, such as a scholarly work or the identity of an agent, can be made publicly accessible only with the permissions of the relevant agents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Opt-In</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/Platform -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/Platform">
+        <rdfs:comment xml:lang="en">A platform for scholarly communication, in particular for the publication and/or evaluation of scholarly works, such as a scientific journal, a preprint server or a peer review platform.</rdfs:comment>
+        <rdfs:label xml:lang="en">Platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/PlatformType -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/PlatformType">
+        <rdfs:comment xml:lang="en">A platform type, such as scientific journal, preprint server or peer review platform.</rdfs:comment>
+        <rdfs:label xml:lang="en">Platform Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/Policy -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/Policy">
+        <rdfs:comment xml:lang="en">A policy of a platform.</rdfs:comment>
+        <rdfs:label xml:lang="en">Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/PostPublicationCommenting -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/PostPublicationCommenting">
+        <rdfs:subClassOf rdf:resource="http://purl.org/job/scpo/Work"/>
+        <rdfs:comment xml:lang="en">Allowance of post publication commenting on a scholarly work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://osf.io/7j6ck"/>
+        <rdfs:label xml:lang="en">Post Publication Commenting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/PublicAccessibility -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/PublicAccessibility">
+        <rdfs:comment xml:lang="en">The public accessibility of a piece of information, such as a scholarly work or the identity of an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">Public Accessibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/job/scpo/PublicationElsewherePolicy"/>
+        <rdfs:comment xml:lang="en">A policy of a platform that allows the publication of a scholarly work on other platforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Elsewhere Allowed Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/PublicationElsewhereMandatoryPolicy -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/PublicationElsewhereMandatoryPolicy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/job/scpo/PublicationElsewherePolicy"/>
+        <rdfs:comment xml:lang="en">A policy of a platform that mandates the publication of a scholarly work on other platforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Elsewhere Mandatory Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/PublicationElsewherePolicy -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/PublicationElsewherePolicy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/job/scpo/Policy"/>
+        <rdfs:comment xml:lang="en">A policy of a platform regarding the publication of a scholarly work on other platforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Elsewhere Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/PublicationElsewhereProhibitedPolicy -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/PublicationElsewhereProhibitedPolicy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/job/scpo/PublicationElsewherePolicy"/>
+        <rdfs:comment xml:lang="en">A policy of a platform that prohibits the publication of a scholarly work on other platforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Elsewhere Prohibited Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/PublicationPolicy -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/PublicationPolicy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/job/scpo/Policy"/>
+        <rdfs:comment xml:lang="en">A policy of a platform regarding the publication of a scholarly work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/Work -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/Work">
+        <rdfs:comment xml:lang="en">A scholarly work, such as a research article, review report or review summary.</rdfs:comment>
+        <rdfs:label xml:lang="en">Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/job/scpo/postPublicationCommenting -->
+
+
+    <owl:Class rdf:about="http://purl.org/job/scpo/postPublicationCommenting"/>
+    
+
+
+    <!-- http://purl.org/spar/pro/Policy -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/pro/Policy"/>
+    
+
+
+    <!-- http://purl.org/spar/pro/PublishingRole -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/pro/PublishingRole">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:label xml:lang="en">Publishing Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/pso/PublicationStatus -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/pso/PublicationStatus"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Class -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#PlatformType -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#PlatformType"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/job/scpo/Accessible -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/Accessible">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/PublicAccessibility"/>
+        <rdfs:comment xml:lang="en">A piece of information, such as a scholarly work or the identity of an agent, can be made publicly accessible.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accessible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/AuthorEditorCommunication -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/AuthorEditorCommunication">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/Work"/>
+        <rdfs:comment xml:lang="en">Communication between the author and editor of a scholarly work, including editor decision letter and reviewer responses (rebuttals).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://osf.io/7j6ck"/>
+        <rdfs:label xml:lang="en">Author-Editor Communication</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/NotAccessible -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/NotAccessible">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/PublicAccessibility"/>
+        <rdfs:comment xml:lang="en">A piece of information, such as a scholarly work or the identity of an agent, can not be made publicly accessible.</rdfs:comment>
+        <rdfs:label xml:lang="en">Not Accessible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/ReviewReport -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/ReviewReport">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/Work"/>
+        <rdfs:comment xml:lang="en">Full content of the peer review of a scholarly work.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://osf.io/7j6ck"/>
+        <rdfs:label xml:lang="en">Review Report</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/ReviewSummary -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/ReviewSummary">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/Work"/>
+        <rdfs:comment xml:lang="en">Summarized content of the peer review of a scholarly work by a peer reviewer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://osf.io/7j6ck"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/SubmittedManuscript -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/SubmittedManuscript">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/Work"/>
+        <rdfs:comment xml:lang="en">A scholarly work submitted to a platform and not yet accepted or rejected for publication on the platform.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://osf.io/7j6ck"/>
+        <rdfs:label xml:lang="en">Submitted Manuscript</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/accepted-for-publication -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/accepted-for-publication">
+        <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+        <rdfs:comment xml:lang="en">The status of a scholarly work that has been accepted for publication on a platform.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accepted version</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/postPublicationCommentingClosed -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/postPublicationCommentingClosed">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/postPublicationCommenting"/>
+        <rdfs:comment xml:lang="en">Post publication commenting is closed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://osf.io/7j6ck"/>
+        <rdfs:label xml:lang="en">Post Publication Commenting Closed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/postPublicationCommentingOnInvitation -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/postPublicationCommentingOnInvitation">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/postPublicationCommenting"/>
+        <rdfs:comment xml:lang="en">Post publication commenting is open on invitation only.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://osf.io/7j6ck"/>
+        <rdfs:label xml:lang="en">Post Publication Commenting On Invitation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/job/scpo/postPublicationCommentingOpen -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/job/scpo/postPublicationCommentingOpen">
+        <rdf:type rdf:resource="http://purl.org/job/scpo/postPublicationCommenting"/>
+        <rdfs:comment xml:lang="en">Post publication commenting is open.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://osf.io/7j6ck"/>
+        <rdfs:label xml:lang="en">Post Publication Commenting Open</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/pro/Society -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/pro/Society">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment xml:lang="en">A scholarly society.</rdfs:comment>
+        <rdfs:label xml:lang="en">Society</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/pro/author -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/pro/author">
+        <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/pro/editor -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/pro/editor">
+        <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:label xml:lang="en">Editor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/pro/peer-reviewer -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/pro/peer-reviewer">
+        <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdfs:label xml:lang="en">Peer Reviewer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/pro/publisher -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/pro/publisher">
+        <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/pso/PublicationStatus -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/pso/PublicationStatus">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/pso/published -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/pso/published">
+        <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+        <rdfs:comment xml:lang="en">The status of a scholarly work that has been published on a platform in its final form.</rdfs:comment>
+        <rdfs:label xml:lang="en">Published version</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/pso/submitted -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/spar/pso/submitted">
+        <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+        <rdfs:comment xml:lang="en">The status of a scholarly work that has been submitted to a platform and that has not yet been accepted or rejected for publication on the platform.</rdfs:comment>
+        <rdfs:label xml:lang="en">Submitted version</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc-nd/4.0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc-nd/4.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/licenseDocument"/>
+        <owl:sameAs rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+        <rdfs:label xml:lang="en">CC BY-NC-ND</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc-nd/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc-nd/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc-sa/4.0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/licenseDocument"/>
+        <owl:sameAs rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        <rdfs:label xml:lang="en">CC BY-NC-SA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc-sa/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc-sa/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc/4.0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc/4.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/licenseDocument"/>
+        <owl:sameAs rdf:resource="https://creativecommons.org/licenses/by-nc/4.0/"/>
+        <rdfs:label xml:lang="en">CC BY-NC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nc/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nc/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nd/4.0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nd/4.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/licenseDocument"/>
+        <owl:sameAs rdf:resource="https://creativecommons.org/licenses/by-nd/4.0/"/>
+        <rdfs:label xml:lang="en">CC BY-ND</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nd/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nd/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-nd/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-nd/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-sa/4.0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-sa/4.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/licenseDocument"/>
+        <owl:sameAs rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <rdfs:label xml:lang="en">CC BY-SA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-sa/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-sa/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by-sa/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by-sa/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by/4.0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by/4.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/licenseDocument"/>
+        <owl:sameAs rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <rdfs:label xml:lang="en">CC BY</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/licenses/by/4.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/licenses/by/4.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/publicdomain/zero/1.0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/publicdomain/zero/1.0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/licenseDocument"/>
+        <owl:sameAs rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <rdfs:label xml:lang="en">CC0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://creativecommons.org/publicdomain/zero/1.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/publicdomain/zero/1.0/"/>
+    
+
+
+    <!-- https://creativecommons.org/publicdomain/zero/1.0/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://creativecommons.org/publicdomain/zero/1.0/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/license"/>
+    <rdf:Description rdf:about="http://purl.org/job/scpo/hasCrossrefId">
+        <rdfs:comment xml:lang="en">Relation linking a platform to its Crossref identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Crossref Identifier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/job/scpo/hasDimensionsId">
+        <rdfs:comment xml:lang="en">Relation linking a platform to its Dimensions identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dimensions Identifier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/job/scpo/hasFatcatId">
+        <rdfs:comment xml:lang="en">Relation linking a platform to its FatCat identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fatcat Identifier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/job/scpo/hasMagId">
+        <rdfs:comment xml:lang="en">Relation linking a platform to its Microsoft Academic Graph identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Microsoft Academic Graph Identifier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/job/scpo/hasOpenalexId">
+        <rdfs:comment xml:lang="en">Relation linking a platform to its OpenAlex identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">OpenAlex Identifier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/job/scpo/hasScopusId">
+        <rdfs:comment xml:lang="en">Relation linking a platform to its Scopus identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scopus Identifier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/job/scpo/hasSherpaRomeoId">
+        <rdfs:comment xml:lang="en">Relation linking a platform to its Sherpa Romeo identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sherpa-Romeo Identifier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/spar/fabio/hasEmbargoDuration">
+        <rdfs:comment xml:lang="en">The duration of the period in which a scholarly work is under embargo (i.e., the work has been published on a platform but has not yet been made openly accessible).</rdfs:comment>
+        <rdfs:label xml:lang="en">has Embargo Duration</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/spar/pso/PublicationStatus">
+        <rdfs:comment xml:lang="en">A state or condition that a work may have that relates to the publication of such work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Status</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://schema.org/name">
+        <rdfs:label xml:lang="en">Name</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://schema.org/price">
+        <rdfs:label xml:lang="en">Price</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://schema.org/priceCurrency">
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://schema.org/url">
+        <rdfs:label xml:lang="en">URL</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

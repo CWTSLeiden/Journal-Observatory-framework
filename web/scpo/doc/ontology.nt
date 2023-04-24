@@ -1,0 +1,662 @@
+<http://purl.org/job/scpo/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/abstract> "\nTODO: Abstract\n"@en .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/creator> "Bram van den Boomen" .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/creator> "Ludo Waltman" .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/creator> "Nees-Jan van Eck" .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/creator> "Serge Horbach" .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/creator> "Tony Ross-Hellauer" .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/date> "2023-04-21" .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/description> "\nTODO: Introduction (markdown)\n"@en .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://purl.org/job/scpo/> <http://purl.org/dc/terms/title> "SCPO, the Scholarly Communication Platform Ontology" .
+<http://purl.org/job/scpo/> <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" .
+<http://purl.org/job/scpo/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://prismstandard.org/namespaces/basic/2.0/doi
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identifier (DOI)"@en .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#label> "DOI"@en .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://prismstandard.org/namespaces/basic/2.0/eIssn
+<http://prismstandard.org/namespaces/basic/2.0/eIssn> <http://www.w3.org/2000/01/rdf-schema#comment> "Electronic International Standard Serial Number (ISSN)"@en .
+<http://prismstandard.org/namespaces/basic/2.0/eIssn> <http://www.w3.org/2000/01/rdf-schema#label> "Electronic ISSN"@en .
+<http://prismstandard.org/namespaces/basic/2.0/eIssn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://prismstandard.org/namespaces/basic/2.0/eIssn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://prismstandard.org/namespaces/basic/2.0/issn
+<http://prismstandard.org/namespaces/basic/2.0/issn> <http://www.w3.org/2000/01/rdf-schema#comment> "Print International Standard Serial Number (ISSN)"@en .
+<http://prismstandard.org/namespaces/basic/2.0/issn> <http://www.w3.org/2000/01/rdf-schema#label> "Print ISSN"@en .
+<http://prismstandard.org/namespaces/basic/2.0/issn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://prismstandard.org/namespaces/basic/2.0/issn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/identifier> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@en .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/license> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#label> "License"@en .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/publisher> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "has Publisher"@en .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+<http://purl.org/dc/terms/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/relation> <http://www.w3.org/2000/01/rdf-schema#label> "has Relation"@en .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/job/scpo/hasCrossrefId
+<http://purl.org/job/scpo/hasCrossrefId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/job/scpo/hasCrossrefId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://purl.org/job/scpo/hasDimensionsId
+<http://purl.org/job/scpo/hasDimensionsId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/job/scpo/hasDimensionsId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://purl.org/job/scpo/hasFatcatId
+<http://purl.org/job/scpo/hasFatcatId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/job/scpo/hasFatcatId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://purl.org/job/scpo/hasMagId
+<http://purl.org/job/scpo/hasMagId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/job/scpo/hasMagId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://purl.org/job/scpo/hasOpenalexId
+<http://purl.org/job/scpo/hasOpenalexId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/job/scpo/hasOpenalexId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://purl.org/job/scpo/hasScopusId
+<http://purl.org/job/scpo/hasScopusId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/job/scpo/hasScopusId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://purl.org/job/scpo/hasSherpaRomeoId
+<http://purl.org/job/scpo/hasSherpaRomeoId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/job/scpo/hasSherpaRomeoId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/spar/fabio/hasIssnL
+<http://purl.org/spar/fabio/hasIssnL> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking International Standard Serial Number (ISSN)"@en .
+<http://purl.org/spar/fabio/hasIssnL> <http://www.w3.org/2000/01/rdf-schema#label> "Linking ISSN"@en .
+<http://purl.org/spar/fabio/hasIssnL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/spar/fabio/hasIssnL> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# http://www.wikidata.org/entity/id
+<http://www.wikidata.org/entity/id> <http://www.w3.org/2000/01/rdf-schema#label> "Wikidata Identifier"@en .
+<http://www.wikidata.org/entity/id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.wikidata.org/entity/id> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/job/scpo/anonymousTo
+<http://purl.org/job/scpo/anonymousTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/anonymousTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/anonymousTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/anonymousTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying that an agent is not aware of the identity of another agent in an evaluation process."@en .
+<http://purl.org/job/scpo/anonymousTo> <http://www.w3.org/2000/01/rdf-schema#label> "Anonymous To"@en .
+# 
+# http://purl.org/job/scpo/appliesToVersion
+<http://purl.org/job/scpo/appliesToVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/appliesToVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/Policy> .
+<http://purl.org/spar/pro/Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/appliesToVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pso/PublicationStatus> .
+<http://purl.org/spar/pso/PublicationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/appliesToVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying the version of a scholarly work to which a policy applies."@en .
+<http://purl.org/job/scpo/appliesToVersion> <http://www.w3.org/2000/01/rdf-schema#label> "applies to Version"@en .
+# 
+# http://purl.org/job/scpo/covers
+<http://purl.org/job/scpo/covers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/covers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Policy> .
+<http://purl.org/job/scpo/covers> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/scpo/Work> .
+<http://purl.org/job/scpo/covers> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying that a policy includes restrictions or allowances on a scholarly work."@en .
+<http://purl.org/job/scpo/covers> <http://www.w3.org/2000/01/rdf-schema#label> "covers"@en .
+# 
+# http://purl.org/job/scpo/hasArticleProcessingCharge
+<http://purl.org/job/scpo/hasArticleProcessingCharge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/hasArticleProcessingCharge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/PublicationPolicy> .
+<http://purl.org/job/scpo/PublicationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/hasArticleProcessingCharge> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/scpo/ArticleProcessingCharge> .
+<http://purl.org/job/scpo/hasArticleProcessingCharge> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a publication policy to an article processing charge."@en .
+<http://purl.org/job/scpo/hasArticleProcessingCharge> <http://www.w3.org/2000/01/rdf-schema#label> "has Article Processing Charge"@en .
+# 
+# http://purl.org/job/scpo/hasCopyrightOwner
+<http://purl.org/job/scpo/hasCopyrightOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/hasCopyrightOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Policy> .
+<http://purl.org/job/scpo/hasCopyrightOwner> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/hasCopyrightOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a publication policy to a copyright owner."@en .
+<http://purl.org/job/scpo/hasCopyrightOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has Copyright Owner"@en .
+# 
+# http://purl.org/job/scpo/hasInitiator
+<http://purl.org/job/scpo/hasInitiator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/hasInitiator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/job/scpo/involves> .
+<http://purl.org/job/scpo/involves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/hasInitiator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/EvaluationPolicy> .
+<http://purl.org/job/scpo/EvaluationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/hasInitiator> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/hasInitiator> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an evaluation policy to the agent that initiates an evaluation."@en .
+<http://purl.org/job/scpo/hasInitiator> <http://www.w3.org/2000/01/rdf-schema#label> "has Initiator"@en .
+# 
+# http://purl.org/job/scpo/hasPlatformType
+<http://purl.org/job/scpo/hasPlatformType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/hasPlatformType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasPlatformType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#PlatformType> .
+<http://www.w3.org/2001/XMLSchema#PlatformType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/hasPlatformType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to a platform type."@en .
+<http://purl.org/job/scpo/hasPlatformType> <http://www.w3.org/2000/01/rdf-schema#label> "has Platform Type"@en .
+# 
+# http://purl.org/job/scpo/hasPolicy
+<http://purl.org/job/scpo/hasPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/PlatformType> .
+<http://purl.org/job/scpo/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/scpo/Policy> .
+<http://purl.org/job/scpo/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to a policy."@en .
+<http://purl.org/job/scpo/hasPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "has Policy"@en .
+# 
+# http://purl.org/job/scpo/hasPostPublicationCommenting
+<http://purl.org/job/scpo/hasPostPublicationCommenting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/hasPostPublicationCommenting> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/EvaluationPolicy> .
+<http://purl.org/job/scpo/hasPostPublicationCommenting> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/scpo/PostPublicationCommenting> .
+<http://purl.org/job/scpo/PostPublicationCommenting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/hasPostPublicationCommenting> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying whether an evaluation policy allows post publication commenting."@en .
+<http://purl.org/job/scpo/hasPostPublicationCommenting> <http://www.w3.org/2000/01/rdf-schema#label> "Has Post Publication Commenting"@en .
+# 
+# http://purl.org/job/scpo/identityPubliclyAccessible
+<http://purl.org/job/scpo/identityPubliclyAccessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/identityPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/job/scpo/publiclyAccessible> .
+<http://purl.org/job/scpo/publiclyAccessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/identityPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/identityPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/scpo/PublicAccessibility> .
+<http://purl.org/job/scpo/identityPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying the public accessibility of the identity of an agent."@en .
+<http://purl.org/job/scpo/identityPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#label> "identity Publicly Accessible"@en .
+# 
+# http://purl.org/job/scpo/interactsWith
+<http://purl.org/job/scpo/interactsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/interactsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://purl.org/job/scpo/interactsWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/interactsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/interactsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation that signifies that an agent can interact with another agent during the review process."@en .
+<http://purl.org/job/scpo/interactsWith> <http://www.w3.org/2000/01/rdf-schema#label> "interacts With"@en .
+# 
+# http://purl.org/job/scpo/involves
+<http://purl.org/job/scpo/involves> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Policy> .
+<http://purl.org/job/scpo/involves> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/involves> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying that a policy involves an agent."@en .
+<http://purl.org/job/scpo/involves> <http://www.w3.org/2000/01/rdf-schema#label> "involves"@en .
+# 
+# http://purl.org/job/scpo/optInBy
+<http://purl.org/job/scpo/optInBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/optInBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/OptIn> .
+<http://purl.org/job/scpo/optInBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/job/scpo/optInBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying the permission of an agent to make a piece of information, such as a scholarly work or the identity of an agent, publicly accessible."@en .
+<http://purl.org/job/scpo/optInBy> <http://www.w3.org/2000/01/rdf-schema#label> "opt-In By"@en .
+# 
+# http://purl.org/job/scpo/publiclyAccessible
+<http://purl.org/job/scpo/publiclyAccessible> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/scpo/PublicAccessibility> .
+<http://purl.org/job/scpo/publiclyAccessible> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying the public accessibility of a piece of information."@en .
+<http://purl.org/job/scpo/publiclyAccessible> <http://www.w3.org/2000/01/rdf-schema#label> "publicly Accessible"@en .
+# 
+# http://purl.org/job/scpo/workPubliclyAccessible
+<http://purl.org/job/scpo/workPubliclyAccessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/scpo/workPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/job/scpo/publiclyAccessible> .
+<http://purl.org/job/scpo/workPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Work> .
+<http://purl.org/job/scpo/workPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/scpo/PublicAccessibility> .
+<http://purl.org/job/scpo/workPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying the public accessibility  of a scholarly work."@en .
+<http://purl.org/job/scpo/workPubliclyAccessible> <http://www.w3.org/2000/01/rdf-schema#label> "Work Publicly Accessible"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/job/scpo/hasCrossrefId
+<http://purl.org/job/scpo/hasCrossrefId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/hasCrossrefId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasCrossrefId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/job/scpo/hasDimensionsId
+<http://purl.org/job/scpo/hasDimensionsId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/hasDimensionsId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasDimensionsId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/job/scpo/hasFatcatId
+<http://purl.org/job/scpo/hasFatcatId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/hasFatcatId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasFatcatId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/job/scpo/hasMagId
+<http://purl.org/job/scpo/hasMagId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/hasMagId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasMagId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/job/scpo/hasOpenalexId
+<http://purl.org/job/scpo/hasOpenalexId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/hasOpenalexId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasOpenalexId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/job/scpo/hasScopusId
+<http://purl.org/job/scpo/hasScopusId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/hasScopusId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasScopusId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/job/scpo/hasSherpaRomeoId
+<http://purl.org/job/scpo/hasSherpaRomeoId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/hasSherpaRomeoId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/Platform> .
+<http://purl.org/job/scpo/hasSherpaRomeoId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/job/scpo/isOpenAccess
+<http://purl.org/job/scpo/isOpenAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/isOpenAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/PublicationPolicy> .
+<http://purl.org/job/scpo/isOpenAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://purl.org/job/scpo/isOpenAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation signifying whether a publication policy suscports open access publishing."@en .
+<http://purl.org/job/scpo/isOpenAccess> <http://www.w3.org/2000/01/rdf-schema#label> "is Open Access"@en .
+# 
+# http://purl.org/job/scpo/publicationCondition
+<http://purl.org/job/scpo/publicationCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/publicationCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy> .
+<http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/publicationCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/job/scpo/publicationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation describing a condition for allowing publication of a scholarly work on other platforms."@en .
+<http://purl.org/job/scpo/publicationCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Condition"@en .
+# 
+# http://purl.org/job/scpo/publicationLocation
+<http://purl.org/job/scpo/publicationLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/job/scpo/publicationLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy> .
+<http://purl.org/job/scpo/publicationLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/job/scpo/publicationLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation describing a condition for allowing publication of a scholarly work on specific types of other platforms."@en .
+<http://purl.org/job/scpo/publicationLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Location"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/LicenseDocument
+<http://purl.org/dc/terms/LicenseDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/LicenseDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A legal document giving official permission to do something with the resource."@en .
+<http://purl.org/dc/terms/LicenseDocument> <http://www.w3.org/2000/01/rdf-schema#label> "License"@en .
+# 
+# http://purl.org/dc/terms/licenseDocument
+<http://purl.org/dc/terms/licenseDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/job/scpo/ArticleProcessingCharge
+<http://purl.org/job/scpo/ArticleProcessingCharge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/ArticleProcessingCharge> <http://www.w3.org/2000/01/rdf-schema#comment> "The article processing charge (APC) that a platform charges to the authors of a scholarly work."@en .
+<http://purl.org/job/scpo/ArticleProcessingCharge> <http://www.w3.org/2000/01/rdf-schema#label> "Article Processing Charge"@en .
+# 
+# http://purl.org/job/scpo/EvaluationPolicy
+<http://purl.org/job/scpo/EvaluationPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/job/scpo/Policy> .
+<http://purl.org/job/scpo/EvaluationPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy of a platform regarding the evaluation of a scholarly work."@en .
+<http://purl.org/job/scpo/EvaluationPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Policy"@en .
+# 
+# http://purl.org/job/scpo/OptIn
+<http://purl.org/job/scpo/OptIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/OptIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of information, such as a scholarly work or the identity of an agent, can be made publicly accessible only with the permissions of the relevant agents."@en .
+<http://purl.org/job/scpo/OptIn> <http://www.w3.org/2000/01/rdf-schema#label> "Opt-In"@en .
+# 
+# http://purl.org/job/scpo/Platform
+<http://purl.org/job/scpo/Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "A platform for scholarly communication, in particular for the publication and/or evaluation of scholarly works, such as a scientific journal, a preprint server or a peer review platform."@en .
+<http://purl.org/job/scpo/Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en .
+# 
+# http://purl.org/job/scpo/PlatformType
+<http://purl.org/job/scpo/PlatformType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/PlatformType> <http://www.w3.org/2000/01/rdf-schema#comment> "A platform type, such as scientific journal, preprint server or peer review platform."@en .
+<http://purl.org/job/scpo/PlatformType> <http://www.w3.org/2000/01/rdf-schema#label> "Platform Type"@en .
+# 
+# http://purl.org/job/scpo/Policy
+<http://purl.org/job/scpo/Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/Policy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy of a platform."@en .
+<http://purl.org/job/scpo/Policy> <http://www.w3.org/2000/01/rdf-schema#label> "Policy"@en .
+# 
+# http://purl.org/job/scpo/PostPublicationCommenting
+<http://purl.org/job/scpo/PostPublicationCommenting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/job/scpo/Work> .
+<http://purl.org/job/scpo/PostPublicationCommenting> <http://www.w3.org/2000/01/rdf-schema#comment> "Allowance of post publication commenting on a scholarly work."@en .
+<http://purl.org/job/scpo/PostPublicationCommenting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://osf.io/7j6ck> .
+<http://purl.org/job/scpo/PostPublicationCommenting> <http://www.w3.org/2000/01/rdf-schema#label> "Post Publication Commenting"@en .
+# 
+# http://purl.org/job/scpo/PublicAccessibility
+<http://purl.org/job/scpo/PublicAccessibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/PublicAccessibility> <http://www.w3.org/2000/01/rdf-schema#comment> "The public accessibility of a piece of information, such as a scholarly work or the identity of an agent."@en .
+<http://purl.org/job/scpo/PublicAccessibility> <http://www.w3.org/2000/01/rdf-schema#label> "Public Accessibility"@en .
+# 
+# http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy
+<http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/job/scpo/PublicationElsewherePolicy> .
+<http://purl.org/job/scpo/PublicationElsewherePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy of a platform that allows the publication of a scholarly work on other platforms."@en .
+<http://purl.org/job/scpo/PublicationElsewhereAllowedPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Elsewhere Allowed Policy"@en .
+# 
+# http://purl.org/job/scpo/PublicationElsewhereMandatoryPolicy
+<http://purl.org/job/scpo/PublicationElsewhereMandatoryPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/PublicationElsewhereMandatoryPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/job/scpo/PublicationElsewherePolicy> .
+<http://purl.org/job/scpo/PublicationElsewhereMandatoryPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy of a platform that mandates the publication of a scholarly work on other platforms."@en .
+<http://purl.org/job/scpo/PublicationElsewhereMandatoryPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Elsewhere Mandatory Policy"@en .
+# 
+# http://purl.org/job/scpo/PublicationElsewherePolicy
+<http://purl.org/job/scpo/PublicationElsewherePolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/job/scpo/Policy> .
+<http://purl.org/job/scpo/PublicationElsewherePolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy of a platform regarding the publication of a scholarly work on other platforms."@en .
+<http://purl.org/job/scpo/PublicationElsewherePolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Elsewhere Policy"@en .
+# 
+# http://purl.org/job/scpo/PublicationElsewhereProhibitedPolicy
+<http://purl.org/job/scpo/PublicationElsewhereProhibitedPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/PublicationElsewhereProhibitedPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/job/scpo/PublicationElsewherePolicy> .
+<http://purl.org/job/scpo/PublicationElsewhereProhibitedPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy of a platform that prohibits the publication of a scholarly work on other platforms."@en .
+<http://purl.org/job/scpo/PublicationElsewhereProhibitedPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Elsewhere Prohibited Policy"@en .
+# 
+# http://purl.org/job/scpo/PublicationPolicy
+<http://purl.org/job/scpo/PublicationPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/job/scpo/Policy> .
+<http://purl.org/job/scpo/PublicationPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy of a platform regarding the publication of a scholarly work."@en .
+<http://purl.org/job/scpo/PublicationPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Policy"@en .
+# 
+# http://purl.org/job/scpo/Work
+<http://purl.org/job/scpo/Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/scpo/Work> <http://www.w3.org/2000/01/rdf-schema#comment> "A scholarly work, such as a research article, review report or review summary."@en .
+<http://purl.org/job/scpo/Work> <http://www.w3.org/2000/01/rdf-schema#label> "Work"@en .
+# 
+# http://purl.org/job/scpo/postPublicationCommenting
+<http://purl.org/job/scpo/postPublicationCommenting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spar/pro/Policy
+# 
+# http://purl.org/spar/pro/PublishingRole
+<http://purl.org/spar/pro/PublishingRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/spar/pro/PublishingRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/PublishingRole> <http://www.w3.org/2000/01/rdf-schema#label> "Publishing Role"@en .
+# 
+# http://purl.org/spar/pso/PublicationStatus
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#Class
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2001/XMLSchema#PlatformType
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/Organization> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/job/scpo/Accessible
+<http://purl.org/job/scpo/Accessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/Accessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/PublicAccessibility> .
+<http://purl.org/job/scpo/Accessible> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of information, such as a scholarly work or the identity of an agent, can be made publicly accessible."@en .
+<http://purl.org/job/scpo/Accessible> <http://www.w3.org/2000/01/rdf-schema#label> "Accessible"@en .
+# 
+# http://purl.org/job/scpo/AuthorEditorCommunication
+<http://purl.org/job/scpo/AuthorEditorCommunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/AuthorEditorCommunication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/Work> .
+<http://purl.org/job/scpo/AuthorEditorCommunication> <http://www.w3.org/2000/01/rdf-schema#comment> "Communication between the author and editor of a scholarly work, including editor decision letter and reviewer responses (rebuttals)."@en .
+<http://purl.org/job/scpo/AuthorEditorCommunication> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://osf.io/7j6ck> .
+<http://purl.org/job/scpo/AuthorEditorCommunication> <http://www.w3.org/2000/01/rdf-schema#label> "Author-Editor Communication"@en .
+# 
+# http://purl.org/job/scpo/NotAccessible
+<http://purl.org/job/scpo/NotAccessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/NotAccessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/PublicAccessibility> .
+<http://purl.org/job/scpo/NotAccessible> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of information, such as a scholarly work or the identity of an agent, can not be made publicly accessible."@en .
+<http://purl.org/job/scpo/NotAccessible> <http://www.w3.org/2000/01/rdf-schema#label> "Not Accessible"@en .
+# 
+# http://purl.org/job/scpo/ReviewReport
+<http://purl.org/job/scpo/ReviewReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/ReviewReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/Work> .
+<http://purl.org/job/scpo/ReviewReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Full content of the peer review of a scholarly work."@en .
+<http://purl.org/job/scpo/ReviewReport> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://osf.io/7j6ck> .
+<http://purl.org/job/scpo/ReviewReport> <http://www.w3.org/2000/01/rdf-schema#label> "Review Report"@en .
+# 
+# http://purl.org/job/scpo/ReviewSummary
+<http://purl.org/job/scpo/ReviewSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/ReviewSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/Work> .
+<http://purl.org/job/scpo/ReviewSummary> <http://www.w3.org/2000/01/rdf-schema#comment> "Summarized content of the peer review of a scholarly work by a peer reviewer."@en .
+<http://purl.org/job/scpo/ReviewSummary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://osf.io/7j6ck> .
+# 
+# http://purl.org/job/scpo/SubmittedManuscript
+<http://purl.org/job/scpo/SubmittedManuscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/SubmittedManuscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/Work> .
+<http://purl.org/job/scpo/SubmittedManuscript> <http://www.w3.org/2000/01/rdf-schema#comment> "A scholarly work submitted to a platform and not yet accepted or rejected for publication on the platform."@en .
+<http://purl.org/job/scpo/SubmittedManuscript> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://osf.io/7j6ck> .
+<http://purl.org/job/scpo/SubmittedManuscript> <http://www.w3.org/2000/01/rdf-schema#label> "Submitted Manuscript"@en .
+# 
+# http://purl.org/job/scpo/accepted-for-publication
+<http://purl.org/job/scpo/accepted-for-publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/accepted-for-publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> .
+<http://purl.org/job/scpo/accepted-for-publication> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a scholarly work that has been accepted for publication on a platform."@en .
+<http://purl.org/job/scpo/accepted-for-publication> <http://www.w3.org/2000/01/rdf-schema#label> "Accepted version"@en .
+# 
+# http://purl.org/job/scpo/postPublicationCommentingClosed
+<http://purl.org/job/scpo/postPublicationCommentingClosed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/postPublicationCommentingClosed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/postPublicationCommenting> .
+<http://purl.org/job/scpo/postPublicationCommentingClosed> <http://www.w3.org/2000/01/rdf-schema#comment> "Post publication commenting is closed."@en .
+<http://purl.org/job/scpo/postPublicationCommentingClosed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://osf.io/7j6ck> .
+<http://purl.org/job/scpo/postPublicationCommentingClosed> <http://www.w3.org/2000/01/rdf-schema#label> "Post Publication Commenting Closed"@en .
+# 
+# http://purl.org/job/scpo/postPublicationCommentingOnInvitation
+<http://purl.org/job/scpo/postPublicationCommentingOnInvitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/postPublicationCommentingOnInvitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/postPublicationCommenting> .
+<http://purl.org/job/scpo/postPublicationCommentingOnInvitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Post publication commenting is open on invitation only."@en .
+<http://purl.org/job/scpo/postPublicationCommentingOnInvitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://osf.io/7j6ck> .
+<http://purl.org/job/scpo/postPublicationCommentingOnInvitation> <http://www.w3.org/2000/01/rdf-schema#label> "Post Publication Commenting On Invitation"@en .
+# 
+# http://purl.org/job/scpo/postPublicationCommentingOpen
+<http://purl.org/job/scpo/postPublicationCommentingOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/scpo/postPublicationCommentingOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/job/scpo/postPublicationCommenting> .
+<http://purl.org/job/scpo/postPublicationCommentingOpen> <http://www.w3.org/2000/01/rdf-schema#comment> "Post publication commenting is open."@en .
+<http://purl.org/job/scpo/postPublicationCommentingOpen> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://osf.io/7j6ck> .
+<http://purl.org/job/scpo/postPublicationCommentingOpen> <http://www.w3.org/2000/01/rdf-schema#label> "Post Publication Commenting Open"@en .
+# 
+# http://purl.org/spar/pro/Society
+<http://purl.org/spar/pro/Society> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/Society> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/spar/pro/Society> <http://www.w3.org/2000/01/rdf-schema#comment> "A scholarly society."@en .
+<http://purl.org/spar/pro/Society> <http://www.w3.org/2000/01/rdf-schema#label> "Society"@en .
+# 
+# http://purl.org/spar/pro/author
+<http://purl.org/spar/pro/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/author> <http://www.w3.org/2000/01/rdf-schema#label> "Author"@en .
+# 
+# http://purl.org/spar/pro/editor
+<http://purl.org/spar/pro/editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/editor> <http://www.w3.org/2000/01/rdf-schema#label> "Editor"@en .
+# 
+# http://purl.org/spar/pro/peer-reviewer
+<http://purl.org/spar/pro/peer-reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/peer-reviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/peer-reviewer> <http://www.w3.org/2000/01/rdf-schema#label> "Peer Reviewer"@en .
+# 
+# http://purl.org/spar/pro/publisher
+<http://purl.org/spar/pro/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pro/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> .
+<http://purl.org/spar/pro/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://purl.org/spar/pro/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "Publisher"@en .
+# 
+# http://purl.org/spar/pso/PublicationStatus
+<http://purl.org/spar/pso/PublicationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pso/PublicationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> .
+# 
+# http://purl.org/spar/pso/published
+<http://purl.org/spar/pso/published> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pso/published> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> .
+<http://purl.org/spar/pso/published> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a scholarly work that has been published on a platform in its final form."@en .
+<http://purl.org/spar/pso/published> <http://www.w3.org/2000/01/rdf-schema#label> "Published version"@en .
+# 
+# http://purl.org/spar/pso/submitted
+<http://purl.org/spar/pso/submitted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/spar/pso/submitted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> .
+<http://purl.org/spar/pso/submitted> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a scholarly work that has been submitted to a platform and that has not yet been accepted or rejected for publication on the platform."@en .
+<http://purl.org/spar/pso/submitted> <http://www.w3.org/2000/01/rdf-schema#label> "Submitted version"@en .
+# 
+# https://creativecommons.org/licenses/by-nc-nd/4.0
+<https://creativecommons.org/licenses/by-nc-nd/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-nc-nd/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/licenseDocument> .
+<https://creativecommons.org/licenses/by-nc-nd/4.0> <http://www.w3.org/2002/07/owl#sameAs> <https://creativecommons.org/licenses/by-nc-nd/4.0/> .
+<https://creativecommons.org/licenses/by-nc-nd/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-nc-nd/4.0> <http://www.w3.org/2000/01/rdf-schema#label> "CC BY-NC-ND"@en .
+# 
+# https://creativecommons.org/licenses/by-nc-nd/4.0/
+# 
+# https://creativecommons.org/licenses/by-nc-nd/4.0/
+# 
+# https://creativecommons.org/licenses/by-nc-sa/4.0
+<https://creativecommons.org/licenses/by-nc-sa/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-nc-sa/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/licenseDocument> .
+<https://creativecommons.org/licenses/by-nc-sa/4.0> <http://www.w3.org/2002/07/owl#sameAs> <https://creativecommons.org/licenses/by-nc-sa/4.0/> .
+<https://creativecommons.org/licenses/by-nc-sa/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-nc-sa/4.0> <http://www.w3.org/2000/01/rdf-schema#label> "CC BY-NC-SA"@en .
+# 
+# https://creativecommons.org/licenses/by-nc-sa/4.0/
+# 
+# https://creativecommons.org/licenses/by-nc-sa/4.0/
+# 
+# https://creativecommons.org/licenses/by-nc/4.0
+<https://creativecommons.org/licenses/by-nc/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-nc/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/licenseDocument> .
+<https://creativecommons.org/licenses/by-nc/4.0> <http://www.w3.org/2002/07/owl#sameAs> <https://creativecommons.org/licenses/by-nc/4.0/> .
+<https://creativecommons.org/licenses/by-nc/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-nc/4.0> <http://www.w3.org/2000/01/rdf-schema#label> "CC BY-NC"@en .
+# 
+# https://creativecommons.org/licenses/by-nc/4.0/
+# 
+# https://creativecommons.org/licenses/by-nc/4.0/
+# 
+# https://creativecommons.org/licenses/by-nd/4.0
+<https://creativecommons.org/licenses/by-nd/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-nd/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/licenseDocument> .
+<https://creativecommons.org/licenses/by-nd/4.0> <http://www.w3.org/2002/07/owl#sameAs> <https://creativecommons.org/licenses/by-nd/4.0/> .
+<https://creativecommons.org/licenses/by-nd/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-nd/4.0> <http://www.w3.org/2000/01/rdf-schema#label> "CC BY-ND"@en .
+# 
+# https://creativecommons.org/licenses/by-nd/4.0/
+# 
+# https://creativecommons.org/licenses/by-nd/4.0/
+# 
+# https://creativecommons.org/licenses/by-sa/4.0
+<https://creativecommons.org/licenses/by-sa/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-sa/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/licenseDocument> .
+<https://creativecommons.org/licenses/by-sa/4.0> <http://www.w3.org/2002/07/owl#sameAs> <https://creativecommons.org/licenses/by-sa/4.0/> .
+<https://creativecommons.org/licenses/by-sa/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by-sa/4.0> <http://www.w3.org/2000/01/rdf-schema#label> "CC BY-SA"@en .
+# 
+# https://creativecommons.org/licenses/by-sa/4.0/
+# 
+# https://creativecommons.org/licenses/by-sa/4.0/
+# 
+# https://creativecommons.org/licenses/by/4.0
+<https://creativecommons.org/licenses/by/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by/4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/licenseDocument> .
+<https://creativecommons.org/licenses/by/4.0> <http://www.w3.org/2002/07/owl#sameAs> <https://creativecommons.org/licenses/by/4.0/> .
+<https://creativecommons.org/licenses/by/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by/4.0> <http://www.w3.org/2000/01/rdf-schema#label> "CC BY"@en .
+# 
+# https://creativecommons.org/licenses/by/4.0/
+# 
+# https://creativecommons.org/licenses/by/4.0/
+# 
+# https://creativecommons.org/publicdomain/zero/1.0
+<https://creativecommons.org/publicdomain/zero/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/publicdomain/zero/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/licenseDocument> .
+<https://creativecommons.org/publicdomain/zero/1.0> <http://www.w3.org/2002/07/owl#sameAs> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<https://creativecommons.org/publicdomain/zero/1.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/publicdomain/zero/1.0> <http://www.w3.org/2000/01/rdf-schema#label> "CC0"@en .
+# 
+# https://creativecommons.org/publicdomain/zero/1.0/
+# 
+# https://creativecommons.org/publicdomain/zero/1.0/
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+# 
+<http://purl.org/job/scpo/hasCrossrefId> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to its Crossref identifier."@en .
+<http://purl.org/job/scpo/hasCrossrefId> <http://www.w3.org/2000/01/rdf-schema#label> "Crossref Identifier"@en .
+# 
+<http://purl.org/job/scpo/hasDimensionsId> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to its Dimensions identifier."@en .
+<http://purl.org/job/scpo/hasDimensionsId> <http://www.w3.org/2000/01/rdf-schema#label> "Dimensions Identifier"@en .
+# 
+<http://purl.org/job/scpo/hasFatcatId> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to its FatCat identifier."@en .
+<http://purl.org/job/scpo/hasFatcatId> <http://www.w3.org/2000/01/rdf-schema#label> "Fatcat Identifier"@en .
+# 
+<http://purl.org/job/scpo/hasMagId> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to its Microsoft Academic Graph identifier."@en .
+<http://purl.org/job/scpo/hasMagId> <http://www.w3.org/2000/01/rdf-schema#label> "Microsoft Academic Graph Identifier"@en .
+# 
+<http://purl.org/job/scpo/hasOpenalexId> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to its OpenAlex identifier."@en .
+<http://purl.org/job/scpo/hasOpenalexId> <http://www.w3.org/2000/01/rdf-schema#label> "OpenAlex Identifier"@en .
+# 
+<http://purl.org/job/scpo/hasScopusId> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to its Scopus identifier."@en .
+<http://purl.org/job/scpo/hasScopusId> <http://www.w3.org/2000/01/rdf-schema#label> "Scopus Identifier"@en .
+# 
+<http://purl.org/job/scpo/hasSherpaRomeoId> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking a platform to its Sherpa Romeo identifier."@en .
+<http://purl.org/job/scpo/hasSherpaRomeoId> <http://www.w3.org/2000/01/rdf-schema#label> "Sherpa-Romeo Identifier"@en .
+# 
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The duration of the period in which a scholarly work is under embargo (i.e., the work has been published on a platform but has not yet been made openly accessible)."@en .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has Embargo Duration"@en .
+# 
+<http://purl.org/spar/pso/PublicationStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "A state or condition that a work may have that relates to the publication of such work."@en .
+<http://purl.org/spar/pso/PublicationStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Status"@en .
+# 
+<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en .
+# 
+<https://schema.org/price> <http://www.w3.org/2000/01/rdf-schema#label> "Price"@en .
+# 
+<https://schema.org/priceCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "Currency"@en .
+# 
+<https://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#label> "URL"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
