@@ -23,11 +23,11 @@
 scpo: a owl:Ontology ;
     dcterms:title "SCPO, the Scholarly Communication Platform Ontology" ;
     dcterms:creator "Bram van den Boomen" ;
-    dcterms:creator "Nees-Jan van Eck" ;
+    dcterms:creator "Nees Jan van Eck" ;
     dcterms:creator "Ludo Waltman" ;
     dcterms:creator "Serge Horbach" ;
     dcterms:creator "Tony Ross-Hellauer" ;
-    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:date "2023-04-21" ;
     dcterms:description """
 TODO: Introduction (markdown)
