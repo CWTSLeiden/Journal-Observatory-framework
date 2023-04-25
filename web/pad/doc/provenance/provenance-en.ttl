@@ -3,7 +3,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
 <..\index-en.html> a prov:Entity;
-	 dc:title "PAD, the Platform Assertion Document Framework";
+	 dc:title "PAD, the Platform Assertion Document data model";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
@@ -13,6 +13,6 @@
 .
 :agent0 a prov:Agent; foaf:name "Bram van den Boomen".
 :agent1 a prov:Agent; foaf:name "Ludo Waltman".
-:agent2 a prov:Agent; foaf:name "Nees-Jan van Eck".
+:agent2 a prov:Agent; foaf:name "Nees Jan van Eck".
 :agent3 a prov:Agent; foaf:name "Serge Horbach".
 :agent4 a prov:Agent; foaf:name "Tony Ross-Hellauer".

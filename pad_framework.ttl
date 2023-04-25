@@ -17,14 +17,24 @@ pad: a owl:Ontology ;
     dcterms:creator "Tony Ross-Hellauer" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:date "2023-04-21" ;
-    dcterms:description """
-TODO: Introduction (markdown)
-"""@en ;
-    dcterms:abstract """
-TODO: Abstract
-"""@en ;
     bibo:status "Ontology Specification Draft" ;
-    owl:versionInfo "0.1.0" .
+    owl:versionInfo "0.1.0" ;
+    dcterms:description """
+The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.
+
+The PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.
+
+A PAD consists of three named graphs:
+- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.
+- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.
+- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.
+
+The PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:
+- Discarding information from a particular database because the information is considered unreliable.
+- Aggregating information about a platform, and in case of conflicting information, using the most recent information.
+- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.
+- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.
+"""@en .
 
 pad:Assertion a rdfg:Graph ;
     rdfs:label "Assertion"@en ;
@@ -34,7 +44,7 @@ pad:PubInfo a rdfg:Graph ;
     rdfs:label "PADInfo"@en ;
     rdfs:comment "Graph that contains statements about a Platform Assertion Document."@en .
 
-pad:PAD a rdfs:Class ;
+pad:PAD a owl:Class ;
     rdfs:label "Platform Assertion Document"@en ;
     rdfs:comment "A Platform Assertion Document, providing machine readable, tracable way to codify information about scholarly communication platforms."@en .
 
@@ -51,7 +61,7 @@ pad:hasAssertion a owl:FunctionalProperty ;
 pad:hasPubInfo a owl:FunctionalProperty ;
     rdfs:domain pad:PAD ;
     rdfs:range pad:DocInfo ;
-    rdfs:label ""@en ;
+    rdfs:label "has Pub Info"@en ;
     rdfs:comment "The property relating a Platform Assertion Document to its PADInfo."@en .
 
 pad:hasProvenance a owl:FunctionalProperty ;
@@ -79,19 +89,13 @@ pad:hasProvenance a owl:FunctionalProperty ;
     rdfs:comment "The property relating a Platform Assertion Document to the source code by which it was generated."@en .
 
 dcterms:license a rdf:Property ;
-    rdfs:domain rdfg:Graph ;
-    rdfs:range xsd:IRI ;
     rdfs:label "License"@en ;
     rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/license> .
 
 dcterms:created a rdf:Property ;
-    rdfs:domain rdfg:Graph ;
-    rdfs:range xsd:DateTime ;
     rdfs:label "Created On"@en ;
     rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/created> .
 
 dcterms:creator a rdf:Property ;
-    rdfs:domain rdfg:Graph ;
-    rdfs:range dcterms:Agent ;
     rdfs:label "Creator"@en ;
     rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/creator> .

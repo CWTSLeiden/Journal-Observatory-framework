@@ -7,19 +7,30 @@
 @base <http://purl.org/job/pad/> .
 
 <http://purl.org/job/pad/> rdf:type owl:Ontology ;
-                            <http://purl.org/dc/terms/abstract> """
-TODO: Abstract
-"""@en ;
                             <http://purl.org/dc/terms/creator> "Bram van den Boomen" ,
                                                                "Ludo Waltman" ,
-                                                               "Nees-Jan van Eck" ,
+                                                               "Nees Jan van Eck" ,
                                                                "Serge Horbach" ,
                                                                "Tony Ross-Hellauer" ;
                             <http://purl.org/dc/terms/date> "2023-04-21" ;
                             <http://purl.org/dc/terms/description> """
-TODO: Introduction (markdown)
+The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.
+
+The PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.
+
+A PAD consists of three named graphs:
+- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.
+- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.
+- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.
+
+The PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:
+- Discarding information from a particular database because the information is considered unreliable.
+- Aggregating information about a platform, and in case of conflicting information, using the most recent information.
+- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.
+- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.
 """@en ;
-                            <http://purl.org/dc/terms/title> "PAD, the Platform Assertion Document Framework" ;
+                            <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                            <http://purl.org/dc/terms/title> "PAD, the Platform Assertion Document data model" ;
                             <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" ;
                             owl:versionInfo "0.1.0" .
 
@@ -27,8 +38,8 @@ TODO: Introduction (markdown)
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/terms/abstract
-<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/date
@@ -37,6 +48,12 @@ TODO: Introduction (markdown)
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/license> ;
+                                   rdfs:label "License"@en .
 
 
 ###  http://purl.org/dc/terms/title
@@ -50,28 +67,6 @@ TODO: Introduction (markdown)
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> rdf:type owl:ObjectProperty ;
-                                   rdfs:domain <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
-                                   rdfs:range xsd:DateTime ;
-                                   rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/created> ;
-                                   rdfs:label "Created On"@en .
-
-
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty ;
-                                   rdfs:domain <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
-                                   rdfs:range <http://purl.org/dc/terms/Agent> .
-
-
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:ObjectProperty ;
-                                   rdfs:domain <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
-                                   rdfs:range xsd:IRI ;
-                                   rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/license> ;
-                                   rdfs:label "License"@en .
-
 
 ###  http://purl.org/job/pad/hasAssertion
 :hasAssertion rdf:type owl:ObjectProperty ,
@@ -100,7 +95,7 @@ TODO: Introduction (markdown)
             rdfs:domain :PAD ;
             rdfs:range :DocInfo ;
             rdfs:comment "The property relating a Platform Assertion Document to its PADInfo."@en ;
-            rdfs:label ""@en .
+            rdfs:label "has Pub Info"@en .
 
 
 ###  http://purl.org/job/pad/hasSourceAssertion
@@ -125,10 +120,6 @@ TODO: Introduction (markdown)
 #    Classes
 #################################################################
 
-###  http://purl.org/dc/terms/Agent
-<http://purl.org/dc/terms/Agent> rdf:type owl:Class .
-
-
 ###  http://purl.org/job/pad/Assertion
 :Assertion rdf:type owl:Class .
 
@@ -147,10 +138,6 @@ TODO: Introduction (markdown)
 :Provenance rdf:type owl:Class .
 
 
-###  http://www.w3.org/2001/XMLSchema#DateTime
-xsd:DateTime rdf:type owl:Class .
-
-
 ###  http://www.w3.org/2001/XMLSchema#IRI
 xsd:IRI rdf:type owl:Class .
 
@@ -162,11 +149,6 @@ xsd:IRI rdf:type owl:Class .
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://purl.org/job/pad/
-<http://purl.org/job/pad/> rdf:type owl:NamedIndividual ;
-                           <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
-
 
 ###  http://purl.org/job/pad/Assertion
 :Assertion rdf:type owl:NamedIndividual ,
@@ -185,16 +167,17 @@ xsd:IRI rdf:type owl:Class .
          rdfs:label "PADInfo"@en .
 
 
-###  https://creativecommons.org/publicdomain/zero/1.0/
-<https://creativecommons.org/publicdomain/zero/1.0/> rdf:type owl:NamedIndividual .
-
-
 #################################################################
 #    Annotations
 #################################################################
 
+<http://purl.org/dc/terms/created> rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/created> ;
+                                   rdfs:label "Created On"@en .
+
+
 <http://purl.org/dc/terms/creator> rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/creator> ;
                                    rdfs:label "Creator"@en .
+
 
 
 :Assertion rdfs:comment "Graph that contains statements about a platform."@en ;

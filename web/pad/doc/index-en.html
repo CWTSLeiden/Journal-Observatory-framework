@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>PAD, the Platform Assertion Document Framework</title>
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>PAD, the Platform Assertion Document data model</title>
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/job/pad/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/job/pad/","name":"PAD, the Platform Assertion Document Framework", "headline":"TODO: Introduction (markdown)", "datePublished":"Mon Apr 24 16:28:55 CEST 2023", "version":"0.1.0", "author":[{"@type":"Person","name":"Bram van den Boomen"},{"@type":"Person","name":"Ludo Waltman"},{"@type":"Person","name":"Nees-Jan van Eck"},{"@type":"Person","name":"Serge Horbach"},{"@type":"Person","name":"Tony Ross-Hellauer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/job/pad/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/job/pad/","name":"PAD, the Platform Assertion Document data model", "headline":"The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.The PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.A PAD consists of three named graphs:- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.The PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:- Discarding information from a particular database because the information is considered unreliable.- Aggregating information about a platform, and in case of conflicting information, using the most recent information.- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.", "datePublished":"Tue Apr 25 10:42:26 CEST 2023", "version":"0.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Bram van den Boomen"},{"@type":"Person","name":"Ludo Waltman"},{"@type":"Person","name":"Nees Jan van Eck"},{"@type":"Person","name":"Serge Horbach"},{"@type":"Person","name":"Tony Ross-Hellauer"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -54,18 +54,18 @@ $(function(){
 <div class="container">
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
-<h1>PAD, the Platform Assertion Document Framework</h1>
+<h1>PAD, the Platform Assertion Document data model</h1>
 
 
 <dl>
 <dt>Revision:</dt>
 <dd>0.1.0</dd>
 <dt>Authors:</dt>
-<dd>Bram van den Boomen</dd><dd>Ludo Waltman</dd><dd>Nees-Jan van Eck</dd><dd>Serge Horbach</dd><dd>Tony Ross-Hellauer</dd>
+<dd>Bram van den Boomen</dd><dd>Ludo Waltman</dd><dd>Nees Jan van Eck</dd><dd>Serge Horbach</dd><dd>Tony Ross-Hellauer</dd>
 
-<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Bram van den Boomen, Ludo Waltman, Nees-Jan van Eck, Serge Horbach, Tony Ross-Hellauer. PAD, the Platform Assertion Document Framework. Revision: 0.1.0.</dd>
+<dd>Bram van den Boomen, Ludo Waltman, Nees Jan van Eck, Serge Horbach, Tony Ross-Hellauer. PAD, the Platform Assertion Document data model. Revision: 0.1.0.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -76,40 +76,26 @@ $(function(){
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
 
-TODO: Introduction (markdown)
+The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.
+
+The PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.
+
+A PAD consists of three named graphs:
+- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.
+- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.
+- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.
+
+The PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:
+- Discarding information from a particular database because the information is considered unreliable.
+- Aggregating information about a platform, and in case of conflicting information, using the most recent information.
+- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.
+- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.
 </span>
 </div>
-<div id="toc"></div> 
-
-<!--INTRODUCTION SECTION-->
-    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
-<div id="namespacedeclarations">
-<h3 id="ns" class="list">Namespace declarations</h3>
-<div id="ns" align="center">
-<table>
-<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
-<tbody>
-<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;http://purl.org/job/pad/&gt;</td></tr>
-<tr><td></td><td></td></tr>
-<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
-<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
-<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
-<tr><td><b>rdfg</b></td><td>&lt;http://www.w3.org/2004/03/trix/rdfg-1&gt;</td></tr>
-<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
-<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
-<tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo&gt;</td></tr>
-<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-  
+<div id="toc"></div>  
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">PAD, the Platform Assertion Document Framework: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">PAD, the Platform Assertion Document data model: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
@@ -119,21 +105,13 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo"/>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Created On</a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
-         <span>Creator</span>
-      </a>
-   </li>
-   <li>
       <a href="#hasAssertion" title="http://purl.org/job/pad/hasAssertion">has Assertion</a>
    </li>
    <li>
       <a href="#hasProvenance" title="http://purl.org/job/pad/hasProvenance">has Provenance</a>
+   </li>
+   <li>
+      <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo">has Pub Info</a>
    </li>
    <li>
       <a href="#hasSourceAssertion" title="http://purl.org/job/pad/hasSourceAssertion">has Source Assertion</a>
@@ -141,41 +119,7 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#hasSourcePad" title="http://purl.org/job/pad/hasSourcePad">has Source PAD</a>
    </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">License</a>
-   </li>
-</ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
-   <li>
-      <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
-         <span>abstract</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date">
-         <span>date</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
-         <span>description</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/ontology/bibo/status" title="http://purl.org/ontology/bibo/status">
-         <span>status</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
-         <span>title</span>
-      </a>
-   </li>
 </ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
-   <li>
-      <a href="#" title="http://purl.org/job/pad/">
-         <span></span>
-      </a>
-   </li>
    <li>
       <a href="#Assertion" title="http://purl.org/job/pad/Assertion">
          <span>Assertion</span>
@@ -191,19 +135,11 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul>
 </div>
-  
-
-<!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">PAD, the Platform Assertion Document Framework: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
-
-</div>
    
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for PAD, the Platform Assertion Document Framework classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by PAD, the Platform Assertion Document Framework.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for PAD, the Platform Assertion Document data model classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by PAD, the Platform Assertion Document data model.
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
@@ -224,9 +160,9 @@ This section provides details for each class and property defined by PAD, the Pl
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo"/>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasAssertion" title="http://purl.org/job/pad/hasAssertion">has Assertion</a>
+            <a href="#hasAssertion" title="http://purl.org/job/pad/hasAssertion">has Assertion</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasProvenance" title="http://purl.org/job/pad/hasProvenance">has Provenance</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo">has Pub Info</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSourcePad" title="http://purl.org/job/pad/hasSourcePad">has Source PAD</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -241,21 +177,13 @@ This section provides details for each class and property defined by PAD, the Pl
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo"/>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Created On</a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
-            <span>Creator</span>
-         </a>
-      </li>
-      <li>
          <a href="#hasAssertion" title="http://purl.org/job/pad/hasAssertion">has Assertion</a>
       </li>
       <li>
          <a href="#hasProvenance" title="http://purl.org/job/pad/hasProvenance">has Provenance</a>
+      </li>
+      <li>
+         <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo">has Pub Info</a>
       </li>
       <li>
          <a href="#hasSourceAssertion" title="http://purl.org/job/pad/hasSourceAssertion">has Source Assertion</a>
@@ -263,99 +191,7 @@ This section provides details for each class and property defined by PAD, the Pl
       <li>
          <a href="#hasSourcePad" title="http://purl.org/job/pad/hasSourcePad">has Source PAD</a>
       </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">License</a>
-      </li>
    </ul>
-   <div class="entity" id="hasPubInfo">
-      <h3>
-         <sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/job/pad/hasPubInfo</p>
-      <div class="comment">
-         <span class="markdown">The property relating a Platform Assertion Document to its PADInfo.</span>
-      </div>
-      <div class="description">
-         <p>
-            <strong>has characteristics:
-                </strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#PAD" title="http://purl.org/job/pad/PAD">Platform Assertion Document</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://purl.org/job/pad/DocInfo"
-                  target="_blank"
-                  title="http://purl.org/job/pad/DocInfo">doc info</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/created">
-      <h3>Created On<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/created</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://purl.org/dc/elements/1.1/created">http://purl.org/dc/elements/1.1/created</a>
-         </dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/03/trix/rdfg-1/Graph"
-                  target="_blank"
-                  title="http://www.w3.org/2004/03/trix/rdfg-1/Graph">graph</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#DateTime"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#DateTime">date time</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/creator">
-      <h3>Creator<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/03/trix/rdfg-1/Graph"
-                  target="_blank"
-                  title="http://www.w3.org/2004/03/trix/rdfg-1/Graph">graph</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://purl.org/dc/terms/Agent"
-                  target="_blank"
-                  title="http://purl.org/dc/terms/Agent">agent</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasAssertion">
       <h3>has Assertion<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -422,6 +258,36 @@ This section provides details for each class and property defined by PAD, the Pl
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasPubInfo">
+      <h3>has Pub Info<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/job/pad/hasPubInfo</p>
+      <div class="comment">
+         <span class="markdown">The property relating a Platform Assertion Document to its PADInfo.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PAD" title="http://purl.org/job/pad/PAD">Platform Assertion Document</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://purl.org/job/pad/DocInfo"
+                  target="_blank"
+                  title="http://purl.org/job/pad/DocInfo">doc info</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasSourceAssertion">
       <h3>has Source Assertion<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -482,116 +348,9 @@ This section provides details for each class and property defined by PAD, the Pl
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://purl.org/dc/terms/license">
-      <h3>License<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/license</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://purl.org/dc/elements/1.1/license">http://purl.org/dc/elements/1.1/license</a>
-         </dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="http://www.w3.org/2004/03/trix/rdfg-1/Graph"
-                  target="_blank"
-                  title="http://www.w3.org/2004/03/trix/rdfg-1/Graph">graph</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#IRI"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#IRI">i r i</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="annotationproperties">
-   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
-            <span>abstract</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date">
-            <span>date</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
-            <span>description</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/ontology/bibo/status" title="http://purl.org/ontology/bibo/status">
-            <span>status</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
-            <span>title</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="http://purl.org/dc/terms/abstract">
-      <h3>abstract<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/date">
-      <h3>date<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/date</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/description">
-      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
-   </div>
-   <div class="entity" id="http://purl.org/ontology/bibo/status">
-      <h3>status<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/ontology/bibo/status</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/title">
-      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
-   </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
-      <li>
-         <a href="#" title="http://purl.org/job/pad/">
-            <span></span>
-         </a>
-      </li>
       <li>
          <a href="#Assertion" title="http://purl.org/job/pad/Assertion">
             <span>Assertion</span>
@@ -606,24 +365,6 @@ This section provides details for each class and property defined by PAD, the Pl
          </a>
       </li>
    </ul>
-   <div class="entity" id="">
-      <h3>:<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/job/pad/</p>
-      <dl class="description">
-         <dt>has facts</dt>
-         <dd>
-            <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">License</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <a href="https://creativecommons.org/publicdomain/zero/1.0/"
-               target="_blank"
-               title="https://creativecommons.org/publicdomain/zero/1.0/">https://creativecommons.org/publicdomain/zero/1.0/</a>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Assertion">
       <h3>Assertion<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -690,15 +431,6 @@ This section provides details for each class and property defined by PAD, the Pl
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
-</div>
-    
-
-<!--REFERENCES SECTION-->
-  <div id="references">
-<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
-
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

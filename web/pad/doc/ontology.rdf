@@ -9,19 +9,30 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.org/job/pad/">
-        <terms:abstract xml:lang="en">
-TODO: Abstract
-</terms:abstract>
         <terms:creator>Bram van den Boomen</terms:creator>
         <terms:creator>Ludo Waltman</terms:creator>
-        <terms:creator>Nees-Jan van Eck</terms:creator>
+        <terms:creator>Nees Jan van Eck</terms:creator>
         <terms:creator>Serge Horbach</terms:creator>
         <terms:creator>Tony Ross-Hellauer</terms:creator>
         <terms:date>2023-04-21</terms:date>
         <terms:description xml:lang="en">
-TODO: Introduction (markdown)
+The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.
+
+The PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.
+
+A PAD consists of three named graphs:
+- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.
+- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.
+- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.
+
+The PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:
+- Discarding information from a particular database because the information is considered unreliable.
+- Aggregating information about a platform, and in case of conflicting information, using the most recent information.
+- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.
+- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.
 </terms:description>
-        <terms:title>PAD, the Platform Assertion Document Framework</terms:title>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title>PAD, the Platform Assertion Document data model</terms:title>
         <bibo:status>Ontology Specification Draft</bibo:status>
         <owl:versionInfo>0.1.0</owl:versionInfo>
     </owl:Ontology>
@@ -40,10 +51,10 @@ TODO: Introduction (markdown)
     
 
 
-    <!-- http://purl.org/dc/terms/abstract -->
+    <!-- http://purl.org/dc/terms/creator -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
@@ -58,6 +69,16 @@ TODO: Introduction (markdown)
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/license"/>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -84,40 +105,6 @@ TODO: Introduction (markdown)
      -->
 
 
-    
-
-
-    <!-- http://purl.org/dc/terms/created -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/created">
-        <rdfs:domain rdf:resource="http://www.w3.org/2004/03/trix/rdfg-1/Graph"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#DateTime"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/created"/>
-        <rdfs:label xml:lang="en">Created On</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
-        <rdfs:domain rdf:resource="http://www.w3.org/2004/03/trix/rdfg-1/Graph"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license">
-        <rdfs:domain rdf:resource="http://www.w3.org/2004/03/trix/rdfg-1/Graph"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#IRI"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/license"/>
-        <rdfs:label xml:lang="en">License</rdfs:label>
-    </owl:ObjectProperty>
     
 
 
@@ -158,7 +145,7 @@ TODO: Introduction (markdown)
         <rdfs:domain rdf:resource="http://purl.org/job/pad/PAD"/>
         <rdfs:range rdf:resource="http://purl.org/job/pad/DocInfo"/>
         <rdfs:comment xml:lang="en">The property relating a Platform Assertion Document to its PADInfo.</rdfs:comment>
-        <rdfs:label xml:lang="en"></rdfs:label>
+        <rdfs:label xml:lang="en">has Pub Info</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -201,13 +188,6 @@ TODO: Introduction (markdown)
     
 
 
-    <!-- http://purl.org/dc/terms/Agent -->
-
-
-    <owl:Class rdf:about="http://purl.org/dc/terms/Agent"/>
-    
-
-
     <!-- http://purl.org/job/pad/Assertion -->
 
 
@@ -239,13 +219,6 @@ TODO: Introduction (markdown)
     
 
 
-    <!-- http://www.w3.org/2001/XMLSchema#DateTime -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#DateTime"/>
-    
-
-
     <!-- http://www.w3.org/2001/XMLSchema#IRI -->
 
 
@@ -269,15 +242,6 @@ TODO: Introduction (markdown)
      -->
 
 
-    
-
-
-    <!-- http://purl.org/job/pad/ -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/job/pad/">
-        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-    </owl:NamedIndividual>
     
 
 
@@ -310,13 +274,6 @@ TODO: Introduction (markdown)
     
 
 
-    <!-- https://creativecommons.org/publicdomain/zero/1.0/ -->
-
-
-    <owl:NamedIndividual rdf:about="https://creativecommons.org/publicdomain/zero/1.0/"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -326,10 +283,15 @@ TODO: Introduction (markdown)
      -->
 
 
+    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/created"/>
+        <rdfs:label xml:lang="en">Created On</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
         <rdfs:label xml:lang="en">Creator</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/license"/>
     <rdf:Description rdf:about="http://purl.org/job/pad/Assertion">
         <rdfs:comment xml:lang="en">Graph that contains statements about a platform.</rdfs:comment>
         <rdfs:label xml:lang="en">Assertion</rdfs:label>
