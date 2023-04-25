@@ -52,6 +52,9 @@
     "@value" : "License"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -112,6 +115,9 @@
 }, {
   "@id" : "http://purl.org/job/scpo/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Van den Boomen, Bram, Van Eck, Nees Jan, Waltman, Ludo, Ross-Hellauer, Tony, & Horbach, Serge P.J.M. (2023). The Scholarly Communication Platform Framework. Zenodo. https://doi.org/10.5281/zenodo.7860610"
+  } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Bram van den Boomen"
   }, {
@@ -128,7 +134,7 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "\nThe Scholarly Communication Platform Ontology (SCPO) models publication and evaluation policies of scholarly communication platforms.\n\nExamples of properties describing platforms include:\n- An identifier of a platform.\n- A name of a platform.\n- A URL of a platform.\n- An organization managing a platform.\n- A policy of a platform, for instance a publication policy (e.g., covering the organization of open access publishing) or an evaluation policy (e.g., covering the organization of peer review). In the next sections, we discuss how we model these policies.\n\nA publication policy describes a policy of a scholarly communication platform for publishing research articles. Some platforms have multiple publication policies. For instance, a hybrid open access journal has a publication policy for closed access articles and a publication policy for open access articles. Other platforms, for instance peer review platforms, do not publish research articles and therefore do not have a publication policy.\n\nIn addition to publication policies, a scholarly communication platform may also have publication elsewhere policies. A publication elsewhere policy is a policy of a platform that prohibits, allows, or mandates the publication of a research article on other platforms. A platform may have different publication elsewhere policies for different versions of a research article.\n\nThe following examples illustrate the idea of a publication elsewhere policy:\n- Some journals prohibit the publication of some or all versions of a research article on a preprint server (‘Ingelfinger rule’).\n- Some journals allow the publication of some or all versions of a research article on a preprint server.\n- Some journals mandate the publication of some or all versions of a research article on a preprint server. eLife is a well-known example. Overlay journals are another example.\n- Peer review platforms typically mandate the publication of a research article in a journal or on a preprint server. It is not possible to publish a review of an article on these platforms if the article itself has not yet been published.\n\nAn evaluation policy describes the policy of a scholarly communication platform for evaluating research articles. Evaluation may range from in-depth peer review performed by many journals and peer review platforms to more superficial screening performed by many preprint servers. Some platforms, for instance repositories such as Zenodo, do not perform any evaluation and therefore do not have an evaluation policy. The approach taken in the SCPO to model evaluation policies builds on and extends the STM peer review terminology.\n\nThe evaluation of a research article may involve individuals with different roles, for instance authors, reviewers, and editors. These individuals may or may not know each others’ identity. In addition, the evaluation of an article may involve different types of documents. In addition to the article itself, the STM peer review terminology for instance distinguishes between review reports, review summaries, and author/editor communication.\n\nBoth the identities of the individuals involved in the evaluation of a research article and the documents involved in this may or may not be made public, or they may be made public only with the consent of specific individuals.\n"
+    "@value" : "\nThe Scholarly Communication Platform Ontology (SCPO) models publication and evaluation policies of scholarly communication platforms.\n\nExamples of properties describing platforms include:\n- An identifier of a platform.\n- A name of a platform.\n- A URL of a platform.\n- An organization managing a platform.\n- A policy of a platform, for instance a publication policy (e.g., covering the organization of open access publishing) or an evaluation policy (e.g., covering the organization of peer review).\n\nA publication policy describes a policy of a scholarly communication platform for publishing research articles. Some platforms have multiple publication policies. For instance, a hybrid open access journal has a publication policy for closed access articles and a publication policy for open access articles. Other platforms, for instance peer review platforms, do not publish research articles and therefore do not have a publication policy.\n\nIn addition to publication policies, a scholarly communication platform may also have publication elsewhere policies. A publication elsewhere policy is a policy of a platform that prohibits, allows, or mandates the publication of a research article on other platforms. A platform may have different publication elsewhere policies for different versions of a research article.\n\nThe following examples illustrate the idea of a publication elsewhere policy:\n- Some journals prohibit the publication of some or all versions of a research article on a preprint server (‘Ingelfinger rule’).\n- Some journals allow the publication of some or all versions of a research article on a preprint server.\n- Some journals mandate the publication of some or all versions of a research article on a preprint server. *eLife* is a well-known example. Overlay journals are another example.\n- Peer review platforms typically mandate the publication of a research article in a journal or on a preprint server. It is not possible to publish a review of an article on these platforms if the article itself has not yet been published.\n\nAn evaluation policy describes the policy of a scholarly communication platform for evaluating research articles. Evaluation may range from in-depth peer review performed by many journals and peer review platforms to more superficial screening performed by many preprint servers. Some platforms, for instance repositories such as Zenodo, do not perform any evaluation and therefore do not have an evaluation policy. The approach taken in the SCPO to model evaluation policies builds on and extends the [STM peer review terminology](https://osf.io/68rnz/).\n\nThe evaluation of a research article may involve individuals with different roles, for instance authors, reviewers, and editors. These individuals may or may not know each others’ identity. In addition, the evaluation of an article may involve different types of documents. In addition to the article itself, the STM peer review terminology for instance distinguishes between review reports, review summaries, and author/editor communication.\n\nBoth the identities of the individuals involved in the evaluation of a research article and the documents involved in this may or may not be made public, or they may be made public only with the consent of specific individuals.\n\nMore detailed information is available in this [technical report](https://doi.org/10.5281/zenodo.7860610).\n"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
@@ -136,11 +142,17 @@
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "SCPO, the Scholarly Communication Platform Ontology"
   } ],
+  "http://purl.org/ontology/bibo/doi" : [ {
+    "@id" : "https://doi.org/10.5281/zenodo.7860610"
+  } ],
   "http://purl.org/ontology/bibo/status" : [ {
     "@value" : "Ontology Specification Draft"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.1.0"
+  } ],
+  "http://xmlns.com/foaf/0.1/image" : [ {
+    "@id" : "http://purl.org/job/scpo/diagram.png"
   } ]
 }, {
   "@id" : "http://purl.org/job/scpo/Accessible",
@@ -935,6 +947,9 @@
     "@id" : "http://purl.org/job/scpo/publiclyAccessible"
   } ]
 }, {
+  "@id" : "http://purl.org/ontology/bibo/doi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/ontology/bibo/status",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -1098,6 +1113,9 @@
     "@language" : "en",
     "@value" : "Organization"
   } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://creativecommons.org/licenses/by-nc-nd/4.0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],

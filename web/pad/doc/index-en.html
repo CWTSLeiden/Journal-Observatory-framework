@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/job/pad/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/job/pad/","name":"PAD, the Platform Assertion Document data model", "headline":"The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.The PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.A PAD consists of three named graphs:- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.The PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:- Discarding information from a particular database because the information is considered unreliable.- Aggregating information about a platform, and in case of conflicting information, using the most recent information.- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.", "datePublished":"Tue Apr 25 10:42:26 CEST 2023", "version":"0.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Bram van den Boomen"},{"@type":"Person","name":"Ludo Waltman"},{"@type":"Person","name":"Nees Jan van Eck"},{"@type":"Person","name":"Serge Horbach"},{"@type":"Person","name":"Tony Ross-Hellauer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/job/pad/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/job/pad/","name":"PAD, the Platform Assertion Document data model", "headline":"The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.The PAD data model is inspired by the model [introduced for nanopublications](https://doi.org/10.3233/ISU-2010-0613). It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.A PAD consists of three named graphs:- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.The PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:- Discarding information from a particular database because the information is considered unreliable.- Aggregating information about a platform, and in case of conflicting information, using the most recent information.- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.More detailed information is available in this [technical report](https://doi.org/10.5281/zenodo.7860610).", "datePublished":"Tue Apr 25 11:24:28 CEST 2023", "version":"0.1.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Bram van den Boomen"},{"@type":"Person","name":"Ludo Waltman"},{"@type":"Person","name":"Nees Jan van Eck"},{"@type":"Person","name":"Serge Horbach"},{"@type":"Person","name":"Tony Ross-Hellauer"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -65,7 +65,9 @@ $(function(){
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Bram van den Boomen, Ludo Waltman, Nees Jan van Eck, Serge Horbach, Tony Ross-Hellauer. PAD, the Platform Assertion Document data model. Revision: 0.1.0.</dd>
+<dd>Van den Boomen, Bram, Van Eck, Nees Jan, Waltman, Ludo, Ross-Hellauer, Tony, & Horbach, Serge P.J.M. (2023). The Scholarly Communication Platform Framework. Zenodo. https://doi.org/10.5281/zenodo.7860610</dd>
+<dt>DOI:</dt>
+<dd><a href="http://dx.doi.org/https://doi.org/10.5281/zenodo.7860610"><img src ="https://img.shields.io/badge/DOI-https://doi.org/10.5281/zenodo.7860610-blue.svg" alt="https://doi.org/10.5281/zenodo.7860610" /></a></dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -78,7 +80,7 @@ $(function(){
 
 The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.
 
-The PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.
+The PAD data model is inspired by the model [introduced for nanopublications](https://doi.org/10.3233/ISU-2010-0613). It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.
 
 A PAD consists of three named graphs:
 - The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.
@@ -90,6 +92,8 @@ The PAD data model provides users of a PAD with the information needed to reason
 - Aggregating information about a platform, and in case of conflicting information, using the most recent information.
 - Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.
 - Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.
+
+More detailed information is available in this [technical report](https://doi.org/10.5281/zenodo.7860610).
 </span>
 </div>
 <div id="toc"></div>  
@@ -108,10 +112,10 @@ This ontology has the following classes and properties.</span>
       <a href="#hasAssertion" title="http://purl.org/job/pad/hasAssertion">has Assertion</a>
    </li>
    <li>
-      <a href="#hasProvenance" title="http://purl.org/job/pad/hasProvenance">has Provenance</a>
+      <a href="#hasDocInfo" title="http://purl.org/job/pad/hasDocInfo">has Doc Info</a>
    </li>
    <li>
-      <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo">has Pub Info</a>
+      <a href="#hasProvenance" title="http://purl.org/job/pad/hasProvenance">has Provenance</a>
    </li>
    <li>
       <a href="#hasSourceAssertion" title="http://purl.org/job/pad/hasSourceAssertion">has Source Assertion</a>
@@ -126,7 +130,9 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#PubInfo" title="http://purl.org/job/pad/PubInfo">PADInfo</a>
+      <a href="#DocInfo" title="http://purl.org/job/pad/DocInfo">
+         <span>DocInfo</span>
+      </a>
    </li>
    <li>
       <a href="#Provenance" title="http://purl.org/job/pad/Provenance">
@@ -161,8 +167,8 @@ This section provides details for each class and property defined by PAD, the Pl
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasAssertion" title="http://purl.org/job/pad/hasAssertion">has Assertion</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasDocInfo" title="http://purl.org/job/pad/hasDocInfo">has Doc Info</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasProvenance" title="http://purl.org/job/pad/hasProvenance">has Provenance</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo">has Pub Info</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSourcePad" title="http://purl.org/job/pad/hasSourcePad">has Source PAD</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -180,10 +186,10 @@ This section provides details for each class and property defined by PAD, the Pl
          <a href="#hasAssertion" title="http://purl.org/job/pad/hasAssertion">has Assertion</a>
       </li>
       <li>
-         <a href="#hasProvenance" title="http://purl.org/job/pad/hasProvenance">has Provenance</a>
+         <a href="#hasDocInfo" title="http://purl.org/job/pad/hasDocInfo">has Doc Info</a>
       </li>
       <li>
-         <a href="#hasPubInfo" title="http://purl.org/job/pad/hasPubInfo">has Pub Info</a>
+         <a href="#hasProvenance" title="http://purl.org/job/pad/hasProvenance">has Provenance</a>
       </li>
       <li>
          <a href="#hasSourceAssertion" title="http://purl.org/job/pad/hasSourceAssertion">has Source Assertion</a>
@@ -222,6 +228,36 @@ This section provides details for each class and property defined by PAD, the Pl
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasDocInfo">
+      <h3>has Doc Info<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/job/pad/hasDocInfo</p>
+      <div class="comment">
+         <span class="markdown">The property relating a Platform Assertion Document to its DocInfo.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PAD" title="http://purl.org/job/pad/PAD">Platform Assertion Document</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://purl.org/job/pad/DocInfo"
+                  target="_blank"
+                  title="http://purl.org/job/pad/DocInfo">DocInfo</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasProvenance">
       <h3>has Provenance<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -253,36 +289,6 @@ This section provides details for each class and property defined by PAD, the Pl
                <a href="http://www.w3.org/2001/XMLSchema#IRI"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#IRI">i r i</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasPubInfo">
-      <h3>has Pub Info<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/job/pad/hasPubInfo</p>
-      <div class="comment">
-         <span class="markdown">The property relating a Platform Assertion Document to its PADInfo.</span>
-      </div>
-      <div class="description">
-         <p>
-            <strong>has characteristics:
-                </strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#PAD" title="http://purl.org/job/pad/PAD">Platform Assertion Document</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://purl.org/job/pad/DocInfo"
-                  target="_blank"
-                  title="http://purl.org/job/pad/DocInfo">doc info</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -357,7 +363,9 @@ This section provides details for each class and property defined by PAD, the Pl
          </a>
       </li>
       <li>
-         <a href="#PubInfo" title="http://purl.org/job/pad/PubInfo">PADInfo</a>
+         <a href="#DocInfo" title="http://purl.org/job/pad/DocInfo">
+            <span>DocInfo</span>
+         </a>
       </li>
       <li>
          <a href="#Provenance" title="http://purl.org/job/pad/Provenance">
@@ -384,16 +392,13 @@ This section provides details for each class and property defined by PAD, the Pl
          <dd>class</dd>
       </dl>
    </div>
-   <div class="entity" id="PubInfo">
-      <h3>PADInfo<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="DocInfo">
+      <h3>DocInfo<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/job/pad/PubInfo</p>
-      <div class="comment">
-         <span class="markdown">Graph that contains statements about a Platform Assertion Document.</span>
-      </div>
+         <strong>IRI:</strong> http://purl.org/job/pad/DocInfo</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -402,6 +407,8 @@ This section provides details for each class and property defined by PAD, the Pl
                title="http://www.w3.org/2004/03/trix/rdfg-1/Graph">graph</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is also defined as</dt>
+         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="Provenance">

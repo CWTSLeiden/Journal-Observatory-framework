@@ -1,15 +1,18 @@
 <http://purl.org/job/pad/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/bibliographicCitation> "Van den Boomen, Bram, Van Eck, Nees Jan, Waltman, Ludo, Ross-Hellauer, Tony, & Horbach, Serge P.J.M. (2023). The Scholarly Communication Platform Framework. Zenodo. https://doi.org/10.5281/zenodo.7860610" .
 <http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Bram van den Boomen" .
 <http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Ludo Waltman" .
 <http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Nees Jan van Eck" .
 <http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Serge Horbach" .
 <http://purl.org/job/pad/> <http://purl.org/dc/terms/creator> "Tony Ross-Hellauer" .
 <http://purl.org/job/pad/> <http://purl.org/dc/terms/date> "2023-04-21" .
-<http://purl.org/job/pad/> <http://purl.org/dc/terms/description> "\nThe goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.\n\nThe PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.\n\nA PAD consists of three named graphs:\n- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.\n- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.\n- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.\n\nThe PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:\n- Discarding information from a particular database because the information is considered unreliable.\n- Aggregating information about a platform, and in case of conflicting information, using the most recent information.\n- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.\n- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.\n"@en .
+<http://purl.org/job/pad/> <http://purl.org/dc/terms/description> "\nThe goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.\n\nThe PAD data model is inspired by the model [introduced for nanopublications](https://doi.org/10.3233/ISU-2010-0613). It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.\n\nA PAD consists of three named graphs:\n- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.\n- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.\n- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.\n\nThe PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:\n- Discarding information from a particular database because the information is considered unreliable.\n- Aggregating information about a platform, and in case of conflicting information, using the most recent information.\n- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.\n- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.\n\nMore detailed information is available in this [technical report](https://doi.org/10.5281/zenodo.7860610).\n"@en .
 <http://purl.org/job/pad/> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <http://purl.org/job/pad/> <http://purl.org/dc/terms/title> "PAD, the Platform Assertion Document data model" .
+<http://purl.org/job/pad/> <http://purl.org/ontology/bibo/doi> <https://doi.org/10.5281/zenodo.7860610> .
 <http://purl.org/job/pad/> <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" .
 <http://purl.org/job/pad/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+<http://purl.org/job/pad/> <http://xmlns.com/foaf/0.1/image> <http://purl.org/job/pad/diagram.png> .
 # 
 # 
 # #################################################################
@@ -18,6 +21,9 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -36,8 +42,14 @@
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/ontology/bibo/status
 <http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/image
+<http://xmlns.com/foaf/0.1/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -57,6 +69,15 @@
 <http://purl.org/job/pad/hasAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to an Assertion."@en .
 <http://purl.org/job/pad/hasAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "has Assertion"@en .
 # 
+# http://purl.org/job/pad/hasDocInfo
+<http://purl.org/job/pad/hasDocInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/job/pad/hasDocInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/job/pad/hasDocInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/pad/PAD> .
+<http://purl.org/job/pad/hasDocInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/pad/DocInfo> .
+<http://purl.org/job/pad/DocInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/job/pad/hasDocInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to its DocInfo."@en .
+<http://purl.org/job/pad/hasDocInfo> <http://www.w3.org/2000/01/rdf-schema#label> "has Doc Info"@en .
+# 
 # http://purl.org/job/pad/hasProvenance
 <http://purl.org/job/pad/hasProvenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/job/pad/hasProvenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
@@ -69,15 +90,6 @@
 <http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to the source code by which it was generated."@en .
 <http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#label> "has Provenance"@en .
 <http://purl.org/job/pad/hasProvenance> <http://www.w3.org/2000/01/rdf-schema#label> "source Code"@en .
-# 
-# http://purl.org/job/pad/hasPubInfo
-<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/job/pad/PAD> .
-<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/job/pad/DocInfo> .
-<http://purl.org/job/pad/DocInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "The property relating a Platform Assertion Document to its PADInfo."@en .
-<http://purl.org/job/pad/hasPubInfo> <http://www.w3.org/2000/01/rdf-schema#label> "has Pub Info"@en .
 # 
 # http://purl.org/job/pad/hasSourceAssertion
 <http://purl.org/job/pad/hasSourceAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -133,15 +145,13 @@
 <http://purl.org/job/pad/Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/job/pad/Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
 # 
+# http://purl.org/job/pad/DocInfo
+<http://purl.org/job/pad/DocInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/job/pad/DocInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+# 
 # http://purl.org/job/pad/Provenance
 <http://purl.org/job/pad/Provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/job/pad/Provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
-# 
-# http://purl.org/job/pad/PubInfo
-<http://purl.org/job/pad/PubInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/job/pad/PubInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
-<http://purl.org/job/pad/PubInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Graph that contains statements about a Platform Assertion Document."@en .
-<http://purl.org/job/pad/PubInfo> <http://www.w3.org/2000/01/rdf-schema#label> "PADInfo"@en .
 # 
 # 
 # 
@@ -161,6 +171,9 @@
 # 
 <http://purl.org/job/pad/Assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Graph that contains statements about a platform."@en .
 <http://purl.org/job/pad/Assertion> <http://www.w3.org/2000/01/rdf-schema#label> "Assertion"@en .
+# 
+<http://purl.org/job/pad/DocInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Graph that contains statements about a Platform Assertion Document."@en .
+<http://purl.org/job/pad/DocInfo> <http://www.w3.org/2000/01/rdf-schema#label> "DocInfo"@en .
 # 
 <http://purl.org/job/pad/Provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Graph that contains statements about an Assertion."@en .
 <http://purl.org/job/pad/Provenance> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance"@en .

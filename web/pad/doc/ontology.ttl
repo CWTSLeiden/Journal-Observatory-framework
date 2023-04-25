@@ -7,6 +7,7 @@
 @base <http://purl.org/job/pad/> .
 
 <http://purl.org/job/pad/> rdf:type owl:Ontology ;
+                            <http://purl.org/dc/terms/bibliographicCitation> "Van den Boomen, Bram, Van Eck, Nees Jan, Waltman, Ludo, Ross-Hellauer, Tony, & Horbach, Serge P.J.M. (2023). The Scholarly Communication Platform Framework. Zenodo. https://doi.org/10.5281/zenodo.7860610" ;
                             <http://purl.org/dc/terms/creator> "Bram van den Boomen" ,
                                                                "Ludo Waltman" ,
                                                                "Nees Jan van Eck" ,
@@ -16,7 +17,7 @@
                             <http://purl.org/dc/terms/description> """
 The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.
 
-The PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.
+The PAD data model is inspired by the model [introduced for nanopublications](https://doi.org/10.3233/ISU-2010-0613). It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.
 
 A PAD consists of three named graphs:
 - The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.
@@ -28,15 +29,23 @@ The PAD data model provides users of a PAD with the information needed to reason
 - Aggregating information about a platform, and in case of conflicting information, using the most recent information.
 - Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.
 - Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.
+
+More detailed information is available in this [technical report](https://doi.org/10.5281/zenodo.7860610).
 """@en ;
                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                             <http://purl.org/dc/terms/title> "PAD, the Platform Assertion Document data model" ;
+                            <http://purl.org/ontology/bibo/doi> <https://doi.org/10.5281/zenodo.7860610> ;
                             <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" ;
-                            owl:versionInfo "0.1.0" .
+                            owl:versionInfo "0.1.0" ;
+                            <http://xmlns.com/foaf/0.1/image> :diagram.png .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
@@ -60,8 +69,16 @@ The PAD data model provides users of a PAD with the information needed to reason
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/ontology/bibo/status
 <http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/image
+<http://xmlns.com/foaf/0.1/image> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -77,6 +94,15 @@ The PAD data model provides users of a PAD with the information needed to reason
               rdfs:label "has Assertion"@en .
 
 
+###  http://purl.org/job/pad/hasDocInfo
+:hasDocInfo rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :PAD ;
+            rdfs:range :DocInfo ;
+            rdfs:comment "The property relating a Platform Assertion Document to its DocInfo."@en ;
+            rdfs:label "has Doc Info"@en .
+
+
 ###  http://purl.org/job/pad/hasProvenance
 :hasProvenance rdf:type owl:ObjectProperty ,
                         owl:FunctionalProperty ;
@@ -87,15 +113,6 @@ The PAD data model provides users of a PAD with the information needed to reason
                             "The property relating a Platform Assertion Document to the source code by which it was generated."@en ;
                rdfs:label "has Provenance"@en ,
                           "source Code"@en .
-
-
-###  http://purl.org/job/pad/hasPubInfo
-:hasPubInfo rdf:type owl:ObjectProperty ,
-                     owl:FunctionalProperty ;
-            rdfs:domain :PAD ;
-            rdfs:range :DocInfo ;
-            rdfs:comment "The property relating a Platform Assertion Document to its PADInfo."@en ;
-            rdfs:label "has Pub Info"@en .
 
 
 ###  http://purl.org/job/pad/hasSourceAssertion
@@ -155,16 +172,14 @@ xsd:IRI rdf:type owl:Class .
                     <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
 
 
+###  http://purl.org/job/pad/DocInfo
+:DocInfo rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+
+
 ###  http://purl.org/job/pad/Provenance
 :Provenance rdf:type owl:NamedIndividual ,
                      <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
-
-
-###  http://purl.org/job/pad/PubInfo
-:PubInfo rdf:type owl:NamedIndividual ,
-                  <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
-         rdfs:comment "Graph that contains statements about a Platform Assertion Document."@en ;
-         rdfs:label "PADInfo"@en .
 
 
 #################################################################
@@ -182,6 +197,10 @@ xsd:IRI rdf:type owl:Class .
 
 :Assertion rdfs:comment "Graph that contains statements about a platform."@en ;
            rdfs:label "Assertion"@en .
+
+
+:DocInfo rdfs:comment "Graph that contains statements about a Platform Assertion Document."@en ;
+         rdfs:label "DocInfo"@en .
 
 
 :Provenance rdfs:comment "Graph that contains statements about an Assertion."@en ;

@@ -1,4 +1,7 @@
 [ {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/created",
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/created"
@@ -39,6 +42,9 @@
 }, {
   "@id" : "http://purl.org/job/pad/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Van den Boomen, Bram, Van Eck, Nees Jan, Waltman, Ludo, Ross-Hellauer, Tony, & Horbach, Serge P.J.M. (2023). The Scholarly Communication Platform Framework. Zenodo. https://doi.org/10.5281/zenodo.7860610"
+  } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Bram van den Boomen"
   }, {
@@ -55,7 +61,7 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "\nThe goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.\n\nThe PAD data model is inspired by the model introduced for nanopublications. It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.\n\nA PAD consists of three named graphs:\n- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.\n- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.\n- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.\n\nThe PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:\n- Discarding information from a particular database because the information is considered unreliable.\n- Aggregating information about a platform, and in case of conflicting information, using the most recent information.\n- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.\n- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.\n"
+    "@value" : "\nThe goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.\n\nThe PAD data model is inspired by the model [introduced for nanopublications](https://doi.org/10.3233/ISU-2010-0613). It uses named graphs to add provenance information. A named graph enables adding a unique identifier to a statement (i.e., to a subject-predicate-object triple). This allows statements to be made about other statements.\n\nA PAD consists of three named graphs:\n- The assertion graph contains statements about a scholarly communication platform. These statements may be subject to error, interpretation, and change. We therefore refer to these statements as assertions.\n- The provenance graph contains statements about the assertion graph. These statements may for instance provide information about the source of the assertions in the assertion graph, the date and time at which the assertions were made, and the conditions under which the information in the assertion graph can be reused.\n- The docinfo graph contains statements about the PAD itself. These statements are primarily used to link the named graphs that make up the PAD together. They may also provide information about the code that was used to create the PAD, the person or organization that created the PAD (which may be different from the source of the assertions in the assertion graph), etc.\n\nThe PAD data model provides users of a PAD with the information needed to reason about the reliability of the information in the assertion graph, to resolve conflicting information, and to deal with updated information. Example use cases include:\n- Discarding information from a particular database because the information is considered unreliable.\n- Aggregating information about a platform, and in case of conflicting information, using the most recent information.\n- Correcting or updating a PAD by referring to the deprecated PAD in the provenance graph of a new PAD.\n- Confirming the information in a PAD by referring to the assertion and provenance graphs of that PAD.\n\nMore detailed information is available in this [technical report](https://doi.org/10.5281/zenodo.7860610).\n"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
@@ -63,11 +69,17 @@
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "PAD, the Platform Assertion Document data model"
   } ],
+  "http://purl.org/ontology/bibo/doi" : [ {
+    "@id" : "https://doi.org/10.5281/zenodo.7860610"
+  } ],
   "http://purl.org/ontology/bibo/status" : [ {
     "@value" : "Ontology Specification Draft"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.1.0"
+  } ],
+  "http://xmlns.com/foaf/0.1/image" : [ {
+    "@id" : "http://purl.org/job/pad/diagram.png"
   } ]
 }, {
   "@id" : "http://purl.org/job/pad/Assertion",
@@ -85,7 +97,18 @@
   } ]
 }, {
   "@id" : "http://purl.org/job/pad/DocInfo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/03/trix/rdfg-1/Graph"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Graph that contains statements about a Platform Assertion Document."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DocInfo"
+  } ]
 }, {
   "@id" : "http://purl.org/job/pad/PAD",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -112,20 +135,6 @@
     "@value" : "Provenance"
   } ]
 }, {
-  "@id" : "http://purl.org/job/pad/PubInfo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2004/03/trix/rdfg-1/Graph"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Graph that contains statements about a Platform Assertion Document."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "PADInfo"
-  } ]
-}, {
   "@id" : "http://purl.org/job/pad/hasAssertion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -141,6 +150,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://purl.org/job/pad/Assertion"
+  } ]
+}, {
+  "@id" : "http://purl.org/job/pad/hasDocInfo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property relating a Platform Assertion Document to its DocInfo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/job/pad/PAD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Doc Info"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/job/pad/DocInfo"
   } ]
 }, {
   "@id" : "http://purl.org/job/pad/hasProvenance",
@@ -166,23 +192,6 @@
     "@id" : "http://purl.org/job/pad/Provenance"
   }, {
     "@id" : "http://www.w3.org/2001/XMLSchema#IRI"
-  } ]
-}, {
-  "@id" : "http://purl.org/job/pad/hasPubInfo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The property relating a Platform Assertion Document to its PADInfo."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/job/pad/PAD"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has Pub Info"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/job/pad/DocInfo"
   } ]
 }, {
   "@id" : "http://purl.org/job/pad/hasSourceAssertion",
@@ -219,6 +228,9 @@
     "@id" : "http://purl.org/job/pad/PAD"
   } ]
 }, {
+  "@id" : "http://purl.org/ontology/bibo/doi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/ontology/bibo/status",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -227,4 +239,7 @@
 }, {
   "@id" : "http://www.w3.org/2004/03/trix/rdfg-1/Graph",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

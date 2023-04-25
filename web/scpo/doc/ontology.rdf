@@ -6,6 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:scpo="http://purl.org/job/scpo/"
      xmlns:basic="http://prismstandard.org/namespaces/basic/2.0/"
@@ -13,6 +14,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:entity="http://www.wikidata.org/entity/">
     <owl:Ontology rdf:about="http://purl.org/job/scpo/">
+        <terms:bibliographicCitation>Van den Boomen, Bram, Van Eck, Nees Jan, Waltman, Ludo, Ross-Hellauer, Tony, &amp; Horbach, Serge P.J.M. (2023). The Scholarly Communication Platform Framework. Zenodo. https://doi.org/10.5281/zenodo.7860610</terms:bibliographicCitation>
         <terms:creator>Bram van den Boomen</terms:creator>
         <terms:creator>Ludo Waltman</terms:creator>
         <terms:creator>Nees Jan van Eck</terms:creator>
@@ -27,7 +29,7 @@ Examples of properties describing platforms include:
 - A name of a platform.
 - A URL of a platform.
 - An organization managing a platform.
-- A policy of a platform, for instance a publication policy (e.g., covering the organization of open access publishing) or an evaluation policy (e.g., covering the organization of peer review). In the next sections, we discuss how we model these policies.
+- A policy of a platform, for instance a publication policy (e.g., covering the organization of open access publishing) or an evaluation policy (e.g., covering the organization of peer review).
 
 A publication policy describes a policy of a scholarly communication platform for publishing research articles. Some platforms have multiple publication policies. For instance, a hybrid open access journal has a publication policy for closed access articles and a publication policy for open access articles. Other platforms, for instance peer review platforms, do not publish research articles and therefore do not have a publication policy.
 
@@ -36,19 +38,23 @@ In addition to publication policies, a scholarly communication platform may also
 The following examples illustrate the idea of a publication elsewhere policy:
 - Some journals prohibit the publication of some or all versions of a research article on a preprint server (‘Ingelfinger rule’).
 - Some journals allow the publication of some or all versions of a research article on a preprint server.
-- Some journals mandate the publication of some or all versions of a research article on a preprint server. eLife is a well-known example. Overlay journals are another example.
+- Some journals mandate the publication of some or all versions of a research article on a preprint server. *eLife* is a well-known example. Overlay journals are another example.
 - Peer review platforms typically mandate the publication of a research article in a journal or on a preprint server. It is not possible to publish a review of an article on these platforms if the article itself has not yet been published.
 
-An evaluation policy describes the policy of a scholarly communication platform for evaluating research articles. Evaluation may range from in-depth peer review performed by many journals and peer review platforms to more superficial screening performed by many preprint servers. Some platforms, for instance repositories such as Zenodo, do not perform any evaluation and therefore do not have an evaluation policy. The approach taken in the SCPO to model evaluation policies builds on and extends the STM peer review terminology.
+An evaluation policy describes the policy of a scholarly communication platform for evaluating research articles. Evaluation may range from in-depth peer review performed by many journals and peer review platforms to more superficial screening performed by many preprint servers. Some platforms, for instance repositories such as Zenodo, do not perform any evaluation and therefore do not have an evaluation policy. The approach taken in the SCPO to model evaluation policies builds on and extends the [STM peer review terminology](https://osf.io/68rnz/).
 
 The evaluation of a research article may involve individuals with different roles, for instance authors, reviewers, and editors. These individuals may or may not know each others’ identity. In addition, the evaluation of an article may involve different types of documents. In addition to the article itself, the STM peer review terminology for instance distinguishes between review reports, review summaries, and author/editor communication.
 
 Both the identities of the individuals involved in the evaluation of a research article and the documents involved in this may or may not be made public, or they may be made public only with the consent of specific individuals.
+
+More detailed information is available in this [technical report](https://doi.org/10.5281/zenodo.7860610).
 </terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title>SCPO, the Scholarly Communication Platform Ontology</terms:title>
+        <bibo:doi rdf:resource="https://doi.org/10.5281/zenodo.7860610"/>
         <bibo:status>Ontology Specification Draft</bibo:status>
         <owl:versionInfo>0.1.0</owl:versionInfo>
+        <foaf:image rdf:resource="http://purl.org/job/scpo/diagram.png"/>
     </owl:Ontology>
     
 
@@ -95,6 +101,13 @@ Both the identities of the individuals involved in the evaluation of a research 
         <rdfs:label xml:lang="en">Print ISSN</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
     
 
 
@@ -230,6 +243,13 @@ Both the identities of the individuals involved in the evaluation of a research 
     
 
 
+    <!-- http://purl.org/ontology/bibo/doi -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
+    
+
+
     <!-- http://purl.org/ontology/bibo/status -->
 
 
@@ -255,6 +275,13 @@ Both the identities of the individuals involved in the evaluation of a research 
         <rdfs:label xml:lang="en">Wikidata Identifier</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/image -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/image"/>
     
 
 
