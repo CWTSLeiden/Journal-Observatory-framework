@@ -3,6 +3,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pad: <http://purl.org/job/pad/> .
@@ -19,6 +20,7 @@ pad: a owl:Ontology ;
     dcterms:date "2023-04-21" ;
     bibo:status "Ontology Specification Draft" ;
     owl:versionInfo "0.1.0" ;
+    foaf:image pad:diagram.png ;
     dcterms:description """
 The goal of the Platform Assertion Document (PAD) data model is to add context to the information about a scholarly communication platform, for instance regarding the origin (provenance) of the information. This context is important to determine whether information can be considered reliable and up-to-date and to understand the conditions under which the information can be used.
 

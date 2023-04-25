@@ -31,6 +31,7 @@ scpo: a owl:Ontology ;
     dcterms:date "2023-04-21" ;
     bibo:status "Ontology Specification Draft" ;
     owl:versionInfo "0.1.0" ;
+    foaf:image scpo:diagram.png ;
     dcterms:description """
 The Scholarly Communication Platform Ontology (SCPO) models publication and evaluation policies of scholarly communication platforms.
 
